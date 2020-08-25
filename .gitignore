@@ -1,0 +1,11 @@
+vim # sqllite db
+
+db.sqlite3
+
+# venv
+
+*venv*
+
+#pycache
+
+*__pycache__*
