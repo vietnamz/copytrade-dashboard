@@ -24,18 +24,13 @@
           <input class="form-control mr-sm-2" type="search" placeholder="Lookup Crypto" aria-label="Search" name="quote">
           <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Lookup</button>
         </form>
-        <form class="form-inline my-2 my-lg-0 mr-sm-2" method="POST" action="{% url 'prices' %}">
+            <a href="{% url 'register' %}"><button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Register</button></a>
+        <form class="form-inline my-2 my-lg-0 mr-sm-2" method="GET" action="{% url 'login' %}">
           {% csrf_token %}
-          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Register</button>
-        </form>
-        <form class="form-inline my-2 my-lg-0 mr-sm-2" method="POST" action="{% url 'login' %}">
-          {% csrf_token %}
-          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Log In</button>
+          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" >Log In</button>
         </form>
       </div>
   </nav>
-
-
   <br/>
   <div class="container">
     {% block content %}
