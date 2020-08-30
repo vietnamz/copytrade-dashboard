@@ -6,7 +6,28 @@
     }
 </script>
 {% block content %}
+
+<!--{% if messages %}-->
+<!--<ul class="messages">-->
+<!--    {% for message in messages %}-->
+<!--    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>-->
+<!--		{% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}-->
+<!--        {{ message }}-->
+<!--    </li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+<!--{% endif %}-->
+
 	<div class="container h-100">
+		{% if sig_error %}
+			<ul class="messages">
+				{{ sig_error }}
+			</ul>
+		{% else %}
+			<ul class="messages">
+				<br/>
+			</ul>
+		{% endif %}
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
@@ -15,7 +36,7 @@
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
-					<form action="/login" method="POST">
+					<form action="{% url 'login' %}" method="POST">
                         {% csrf_token %}
 						<div class="input-group mb-3">
 							<div class="input-group-append">
@@ -36,7 +57,7 @@
 							</div>
 						</div>
 						<div class="d-flex justify-content-center mt-3 login_container">
-				 	        <button type="button" name="login" class="btn login_btn">Login</button>
+				 	        <button type="submit" name="login" class="btn login_btn">Login</button>
 				        </div>
 					</form>
 				</div>
@@ -51,4 +72,5 @@
 			</div>
 		</div>
 	</div>
+<script>console.log("Hello")</script>
 {% endblock %}
