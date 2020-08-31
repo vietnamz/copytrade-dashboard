@@ -24,11 +24,30 @@
           <input class="form-control mr-sm-2" type="search" placeholder="Lookup Crypto" aria-label="Search" name="quote">
           <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Lookup</button>
         </form>
-            <a href="{% url 'register' %}"><button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Register</button></a>
-        <form class="form-inline my-2 my-lg-0 mr-sm-2" method="GET" action="{% url 'login' %}">
-          {% csrf_token %}
-          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" >Log In</button>
-        </form>
+        {% if user.is_authenticated %}
+        <a>
+          <button class="btn btn-outline-secondary my-2 my-sm-0">{{user.get_username}}</button>
+        </a>
+          <a href="{% url 'logout' %}">
+            {% csrf_token %}
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Logout</button>
+          </a>
+        {% else %}
+          <a href="{% url 'register' %}">
+            {% csrf_token %}
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Register</button>
+          </a>
+
+          <a href="{% url 'login' %}">
+            {% csrf_token %}
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Log In</button>
+          </a>
+          <!--form class="form-inline my-2 my-lg-0 mr-sm-2" method="GET" action="{% url 'login' %}">
+            {% csrf_token %}
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" >Log In</button>
+          </form-->
+        {% endif %}
+
       </div>
   </nav>
   <br/>
