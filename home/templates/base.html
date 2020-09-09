@@ -9,7 +9,7 @@
     <title>3 Crickets</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="{%  static 'home/images/favicon.png' %}" type="image/x-icon" />
+    <link rel="icon" href="{%  static 'home/images/crickets.jpg' %}" type="image/x-icon" />
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="{% static 'home/css/materialize.min.css' %}">
     <!-- Tooltip CSS -->
@@ -39,7 +39,7 @@
             <a href="{% url 'index' %}" class="brand-logo"><img src="{% static 'home/images/logo.png' %}" alt=""></a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             {% if user.is_authenticated %}
-                <a href="#post_modal" class="waves-effect btn post_btn sm_post_btn modal-trigger"><i class="ion-plus"></i>Add Post</a>
+                <a href="#post_modal" class="waves-effect btn post_btn sm_post_btn modal-trigger"><i class="ion-plus"></i>Trade</a>
                 <ul class="left_menu hide-on-med-and-down">
                     <li><a href="{% url 'index' %}">Home</a></li>
                     <li><a href="{% url 'profile' %}">Profile</a></li>
@@ -612,7 +612,7 @@
                 </div>
             </div>
             <div class="col l3 m6 footer_col">
-                <img src="{% static 'home/images/advertis-3.jpg' %}" alt="" class="responsive-img">
+                <img src="{% static 'home/images/footer.jpg' %}" alt="" class="responsive-img">
             </div>
         </div>
         <div class="copy_right">
