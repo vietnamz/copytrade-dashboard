@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <title>Open List | Html template</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../static/images/favicon.png" type="image/x-icon" />
+    <!-- Materialize CSS --> 
+    <link rel="stylesheet" href="../../static/css/materialize.min.css">
+    <!-- Tooltip CSS --> 
+    <link rel="stylesheet" href="../../static/vendors/tooltip/balloon.min.css">
+    <!-- Icon CSS-->  
+    <link rel="stylesheet" href="../../static/vendors/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../../static/vendors/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Calendar CSS-->  
+    <link rel="stylesheet" href="../../static/vendors/calendar/dcalendar.picker.css">
+    
+    <!--Theme Styles CSS-->
+	<link rel="stylesheet" href="../../static/css/style.css" media="all" />
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>  
+    <!-- Header_Area --> 
+    <nav class="header_area"> 
+        <div class="custom_container"> 
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo"><img src="../../static/images/logo.png" alt=""></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#post_modal" class="waves-effect btn post_btn sm_post_btn modal-trigger"><i class="ion-plus"></i>Add Post</a>
+                <ul class="left_menu hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>  
+                    <li class="user_dropdown"><a class="dropdown-button" href="#!" data-activates="dropdown6">All Pages</a>
+                        <div id="dropdown6" class="dropdown-content submenu row"> 
+                           <div class="col m4 menu_column">
+                               <ul>
+                                   <li><a href="get-started.html">Get started</a></li>
+                                   <li><a href="dashboard.html">Dashboard</a></li>
+                                   <li><a href="details.html">Post details</a></li>
+                                   <li><a href="details-2.html" class="active">Post details 2</a></li>
+                                   <li><a href="profile.html">Profile</a></li>
+                               </ul> 
+                           </div> 
+                           <div class="col m4 menu_column">
+                               <ul> 
+                                   <li><a href="messages.html">Messages</a></li>
+                                   <li><a href="requests.html">Requests</a></li>
+                                   <li><a href="read-later.html">Read-Later</a></li>
+                                   <li><a href="notifications.html">Notifications</a></li>
+                                   <li><a href="block-list.html">Block-list</a></li>
+                               </ul> 
+                           </div>
+                           <div class="col m4 menu_column">
+                               <ul> 
+                                   <li><a href="photos.html">Photos</a></li>
+                                   <li><a href="photos-2.html">Photos v2</a></li>
+                                   <li><a href="video.html">Videos</a></li>
+                                   <li><a href="error.html">Error (404)</a></li>
+                               </ul> 
+                           </div>  
+                            
+                        </div> 
+                    </li> 
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li class="notifications search_sm"><a class="dropdown-button" href="#!" data-activates="dropdown5"><i class="ion-ios-search"></i></a>
+                        <!-- Dropdown Structure -->
+                        <ul id="dropdown5" class="dropdown-content">  
+                           <li class="search_from"> 
+                                <input placeholder="Search and enter" type="text"> 
+                           </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="right right_menu hide-on-med-and-down">
+                    <li class="search_min">
+                       <div class="search_from"> 
+                            <input placeholder="Search Here" type="text">
+                            <a href="#" class="search_icon"><i class="ion-ios-search"></i></a> 
+                       </div>
+                    </li>
+                    <li><a href="#post_modal" class="waves-effect btn post_btn modal-trigger"><i class="ion-plus"></i><span>Add Post</span></a></li> 
+                    <!-- Follow feed -->
+                    <li class="notifications follow"><a class="dropdown-button" href="#!" data-activates="dropdown4"><i class="ion-ios-person-outline"></i><b class="n-number">7</b></a>
+                        <!-- Dropdown Structure -->
+                        <ul id="dropdown4" class="dropdown-content">
+                            <li class="hed_notic">Follow feed <span><i class="ion-ios-gear-outline"></i></span></li> 
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-9.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Dan Fisher</b> started following you.</p>
+                                            <h6>544 mutual</h6>
+                                            <div class="btn_group"> 
+                                                <span class="waves-effect follow_b">Follow back</span>
+                                                <span class="waves-effect">Block</span>
+                                            </div>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-1.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>James Richardman </b>started following you.</p>
+                                            <h6>32 mutual</h6>
+                                            <div class="btn_group"> 
+                                                <span class="waves-effect confirm"><i class="ion-android-done"></i></span>
+                                                <span class="waves-effect">Block</span>
+                                            </div>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-12.jpg" alt="" class="circle responsive-img w_img">
+                                        <div class="media_body">
+                                            <p>You are now following <b>Meryl Streep</b></p>
+                                            <h6>Check out her most recent updates.</h6> 
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-2.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>James Richardman </b>started following you.</p>
+                                            <h6>90 mutual</h6>
+                                            <div class="btn_group"> 
+                                                <span class="waves-effect close_b"><i class="ion-android-close"></i></span>
+                                                <span class="waves-effect">Block</span>
+                                            </div>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li> 
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-10.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Dan Fisher</b> started following you.</p>
+                                            <h6>544 mutual</h6>
+                                            <div class="btn_group"> 
+                                                <span class="waves-effect follow_b">Follow back</span>
+                                                <span class="waves-effect"><i class="ion-android-done"></i></span>
+                                            </div>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li> 
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-11.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Edgar Hoover</b> started following you.</p> 
+                                            <div class="btn_group left"> 
+                                                <span class="waves-effect follow_b">Follow back</span>
+                                                <span class="waves-effect">Block</span>
+                                            </div>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li> 
+                            <li><a href="requests.html" class="waves-effect chack_all_btn">Check All Follow Requests</a></li>
+                        </ul>
+                    </li>
+                    <!-- Messages -->
+                    <li class="notifications messages"><a class="dropdown-button" href="#!" data-activates="dropdown3"><i class="ion-ios-chatboxes-outline"></i><b class="n-number">3</b></a>
+                        <!-- Dropdown Structure -->
+                        <ul id="dropdown3" class="dropdown-content">
+                            <li class="hed_notic">Messages <span>Mark all as read <i class="ion-ios-gear-outline"></i></span></li> 
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-1.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <h4>Emran Khan <small>12:40pm</small></h4>
+                                            <p>Listen, I need to talk to you about this!</p>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-3.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <h4>Masum Rana <small>2 hours ago</small></h4>
+                                            <p>One of the best ways to make a great vacation quickly horrible is to choose the...</p>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media seen"> 
+                                        <img src="../../static/images/profile-8.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <h4>Jakaria Khan <small>3 hours ago</small></h4>
+                                            <p>Hi</p>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-5.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <h4>Papia Sultana <small>2 days ago</small></h4>
+                                            <p>Hey Masum, I’m looking for you as a new actor for upcoming “Equalizer 2” movie...</p>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media seen"> 
+                                        <img src="../../static/images/profile-7.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <h4>Samuel L. <small>5 days ago</small></h4>
+                                            <p>Hello</p>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li><a href="messages.html" class="waves-effect chack_all_btn">Check All Messages</a></li>
+                        </ul>
+                    </li>
+                    <!-- Notifications -->
+                    <li class="notifications"><a class="dropdown-button" href="#!" data-activates="dropdown2"><i class="ion-ios-bell-outline"></i><b class="n-number">5</b></a>
+                        <!-- Dropdown Structure -->
+                        <ul id="dropdown2" class="dropdown-content">
+                            <li class="hed_notic">Notifications <span>Mark all as read <i class="ion-ios-gear-outline"></i></span></li> 
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-6.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Dan Fisher</b> submitted a new photo  to a <small>post</small> post you are following.</p>
+                                            <h6>5 Minute ago</h6>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-7.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>James Richardman </b>downvoted your <small>answer</small> in a post.</p>
+                                            <h6>5 Minute ago</h6>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media seen"> 
+                                        <img src="../../static/images/profile-8.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Margot Robbie</b> commented on your <small>photo</small>.</p>
+                                            <h6>5 Minute ago</h6>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-9.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Peter Parker</b> is now following you.</p>
+                                            <h6>5 Minute ago</h6>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media seen"> 
+                                        <img src="../../static/images/profile-10.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Dan Fisher </b> submitted a new photo  to a <small>post</small> you are following.</p>
+                                            <h6>5 Minute ago</h6>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li><a href="notifications.html" class="waves-effect chack_all_btn">Check All Notifications</a></li>
+                        </ul>
+                    </li>
+                    <!-- Profile -->
+                    <li class="user_dropdown"><a class="dropdown-button" href="#!" data-activates="dropdown1"><img src="../../static/images/profile-pic.png" alt="" class="circle p_2"></a>
+                        <!-- Dropdown Structure -->
+                        <ul id="dropdown1" class="dropdown-content">
+                            <li><a href="profile.html"><i class="ion-person"></i>My profile</a></li> 
+                            <li><a href="read-later.html"><i class="ion-android-folder-open"></i>Saved Articles</a></li> 
+                            <li class="b_t"><a href="#"><i class="ion-android-notifications"></i>Notification settings</a></li>
+                            <li class="b_b"><a href="#"><i class="ion-ios-locked"></i>Change Password</a></li>
+                            <li><a href="#"><i class="ion-gear-b"></i>Settings</a></li>
+                            <li><a href="#"><i class="ion-ios-flag"></i>Privacy Policy</a></li>
+                            <li><a href="#"><i class="ion-podium"></i>FAQ</a></li>
+                            <li><a href="#"><i class="ion-power"></i>Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li class="search_min">
+                       <div class="search_from"> 
+                            <input placeholder="Search Here" type="text">
+                            <a href="#" class="search_icon"><i class="ion-ios-search"></i></a> 
+                       </div>
+                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="user_dropdown"><a class="dropdown-button" href="#!" data-activates="dropdown_s0">All Pages</a>
+                        <!-- Dropdown Structure -->
+                        <ul id="dropdown_s0" class="dropdown-content">  
+                           <li><a href="get-started.html">Get started</a></li>
+                           <li><a href="dashboard.html">Dashboard</a></li>
+                           <li><a href="details.html">Post details</a></li>
+                           <li><a href="details-2.html">Post details 2</a></li>
+                           <li><a href="profile.html">Profile</a></li>
+                           <li><a href="messages.html">Messages</a></li>
+                           <li><a href="requests.html">Requests</a></li>
+                           <li><a href="read-later.html">Read-Later</a></li>
+                           <li><a href="notifications.html">Notifications</a></li>
+                           <li><a href="block-list.html">Block-list</a></li>
+                           <li><a href="photos.html">Photos</a></li>
+                           <li><a href="photos-2.html">Photos v2</a></li>
+                           <li><a href="video.html">Videos</a></li>
+                           <li><a href="block-list.html">Error (404)</a></li>
+                        </ul>
+                    </li> 
+                    <li><a href="#">Shortcodes</a></li>
+                    <li><a href="#">All Elements</a></li>  
+                    <!-- Follow feed -->
+                    <li class="notifications follow"><a class="dropdown-button" href="#!" data-activates="dropdown_s1"><i class="ion-ios-person-outline"></i><b class="n-number">7</b></a>
+                        <!-- Dropdown Structure -->
+                        <ul id="dropdown_s1" class="dropdown-content">
+                            <li class="hed_notic">Follow feed <span><i class="ion-ios-gear-outline"></i></span></li> 
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-9.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Dan Fisher</b> started following you.</p>
+                                            <h6>544 mutual</h6>
+                                            <div class="btn_group"> 
+                                                <span class="waves-effect follow_b">Follow back</span>
+                                                <span class="waves-effect">Block</span>
+                                            </div>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-1.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>James Richardman </b>started following you.</p>
+                                            <h6>32 mutual</h6>
+                                            <div class="btn_group"> 
+                                                <span class="waves-effect confirm"><i class="ion-android-done"></i></span>
+                                                <span class="waves-effect">Block</span>
+                                            </div>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-12.jpg" alt="" class="circle responsive-img w_img">
+                                        <div class="media_body">
+                                            <p>You are now following <b>Meryl Streep</b></p>
+                                            <h6>Check out her most recent updates.</h6> 
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-2.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>James Richardman </b>started following you.</p>
+                                            <h6>90 mutual</h6>
+                                            <div class="btn_group"> 
+                                                <span class="waves-effect close_b"><i class="ion-android-close"></i></span>
+                                                <span class="waves-effect">Block</span>
+                                            </div>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li> 
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-10.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Dan Fisher</b> started following you.</p>
+                                            <h6>544 mutual</h6>
+                                            <div class="btn_group"> 
+                                                <span class="waves-effect follow_b">Follow back</span>
+                                                <span class="waves-effect"><i class="ion-android-done"></i></span>
+                                            </div>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li> 
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-11.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Edgar Hoover</b> started following you.</p> 
+                                            <div class="btn_group left"> 
+                                                <span class="waves-effect follow_b">Follow back</span>
+                                                <span class="waves-effect">Block</span>
+                                            </div>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li> 
+                            <li><a href="requests.html" class="waves-effect chack_all_btn">Check All Follow Requests</a></li>
+                        </ul>
+                    </li>
+                    <!-- Messages -->
+                    <li class="notifications messages"><a class="dropdown-button" href="#!" data-activates="dropdown_s2"><i class="ion-ios-chatboxes-outline"></i><b class="n-number">3</b></a>
+                        <!-- Dropdown Structure -->
+                        <ul id="dropdown_s2" class="dropdown-content">
+                            <li class="hed_notic">Messages <span>Mark all as read <i class="ion-ios-gear-outline"></i></span></li> 
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-1.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <h4>Emran Khan <small>12:40pm</small></h4>
+                                            <p>Listen, I need to talk to you about this!</p>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-3.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <h4>Masum Rana <small>2 hours ago</small></h4>
+                                            <p>One of the best ways to make a great vacation quickly horrible is to choose the...</p>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media seen"> 
+                                        <img src="../../static/images/profile-8.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <h4>Jakaria Khan <small>3 hours ago</small></h4>
+                                            <p>Hi</p>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-5.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <h4>Papia Sultana <small>2 days ago</small></h4>
+                                            <p>Hey Masum, I’m looking for you as a new actor for upcoming “Equalizer 2” movie...</p>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media seen"> 
+                                        <img src="../../static/images/profile-7.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <h4>Samuel L. <small>5 days ago</small></h4>
+                                            <p>Hello</p>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li><a href="messages.html" class="waves-effect chack_all_btn">Check All Messages</a></li>
+                        </ul>
+                    </li>
+                    <!-- Notifications -->
+                    <li class="notifications"><a class="dropdown-button" href="#!" data-activates="dropdown_s3"><i class="ion-ios-bell-outline"></i><b class="n-number">5</b></a>
+                        <!-- Dropdown Structure -->
+                        <ul id="dropdown_s3" class="dropdown-content">
+                            <li class="hed_notic">Notifications <span>Mark all as read <i class="ion-ios-gear-outline"></i></span></li> 
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-6.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Dan Fisher</b> submitted a new photo  to a <small>post</small> post you are following.</p>
+                                            <h6>5 Minute ago</h6>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-7.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>James Richardman </b>downvoted your <small>answer</small> in a post.</p>
+                                            <h6>5 Minute ago</h6>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media seen"> 
+                                        <img src="../../static/images/profile-8.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Margot Robbie</b> commented on your <small>photo</small>.</p>
+                                            <h6>5 Minute ago</h6>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media"> 
+                                        <img src="../../static/images/profile-9.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Peter Parker</b> is now following you.</p>
+                                            <h6>5 Minute ago</h6>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <div class="media seen"> 
+                                        <img src="../../static/images/profile-10.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <p><b>Dan Fisher </b> submitted a new photo  to a <small>post</small> you are following.</p>
+                                            <h6>5 Minute ago</h6>
+                                        </div> 
+                                   </div>
+                               </a>  
+                            </li>
+                            <li><a href="notifications.html" class="waves-effect chack_all_btn">Check All Notifications</a></li>
+                        </ul>
+                    </li>
+                    <!-- Profile -->
+                    <li class="user_dropdown"><a class="dropdown-button" href="#!" data-activates="dropdown_s4"><img src="../../static/images/profile-pic.png" alt="" class="circle p_2"></a>
+                        <!-- Dropdown Structure -->
+                        <ul id="dropdown_s4" class="dropdown-content">
+                            <li><a href="profile.html"><i class="ion-person"></i>My profile</a></li> 
+                            <li><a href="read-later.html"><i class="ion-android-folder-open"></i>Saved Articles</a></li> 
+                            <li class="b_t"><a href="#"><i class="ion-android-notifications"></i>Notification settings</a></li>
+                            <li class="b_b"><a href="#"><i class="ion-ios-locked"></i>Change Password</a></li>
+                            <li><a href="#"><i class="ion-gear-b"></i>Settings</a></li>
+                            <li><a href="#"><i class="ion-ios-flag"></i>Privacy Policy</a></li>
+                            <li><a href="#"><i class="ion-podium"></i>FAQ</a></li>
+                            <li><a href="#"><i class="ion-power"></i>Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End  Header_Area --> 
+    
+    <!-- Tranding-select and banner Area -->  
+    <ul class="tranding_select">
+        <li><a href="#" class="waves-effect btn">Latest</a></li>
+        <li><a href="#" class="waves-effect btn">Trending</a></li>
+        <li><a href="#" class="waves-effect btn">Featured</a></li> 
+    </ul> 
+    <!-- End Tranding Area -->  
+    
+    <!-- Min Container area -->
+    <section class="min_container min_container_2">
+        <div class="section_row">
+            <div class="middle_section col">
+                <!-- Post -->
+                <div class="post post_details">
+                   <div class="post_content"> 
+                        <a href="#" class="post_img">
+                            <img src="../../static/images/post-7.jpg" alt="">
+                        </a>
+                        <div class="row author_area"> 
+                            <div class="col s1 btn_floating"> 
+                                <a class="btn-floating waves-effect"><i class="ion-navicon-round"></i></a>
+                            </div> 
+                            <div class="col s6 like_user">
+                                <ul class="like_img">
+                                    <li><a href="#" class="single_l_1"><img src="../../static/images/like-client-1.png" alt=""></a></li>
+                                    <li><a href="#" class="single_l"><img src="../../static/images/like-client-2.png" alt=""></a></li>
+                                    <li><a href="#" class="single_l"><img src="../../static/images/like-client-3.png" alt=""></a></li>
+                                    <li><a href="#" class="single_l"><img src="../../static/images/like-client-4.png" alt=""></a></li>
+                                    <li><a href="#" class="mor_like">257 people added list</a></li>  
+                                </ul>  
+                            </div>
+                            <div class="col s5 add_btn_col">
+                                <a href="#" class="add_btn waves-effect">Add open list</a>
+                            </div>
+                        </div>
+                        <div class="post_heding_aea">
+                            <a href="#" class="post_heding">Why Is It I Can Never Think Of Anything Good To Make For Supper</a>
+                            <h4 class="by_author"><img src="../../static/images/author-s-1.jpg" alt="" class="circle"><a href="#">Masum Rana</a>5 minutes ago</h4>
+                        </div>
+                        <div class="socail_share_area row">
+                           <ul class="socail_share">
+                               <li class="share_count">2.3K</li>
+                               <li><a href="#" class="waves-effect"><i class="fa fa-facebook-square"></i></a></li>
+                               <li><a href="#" class="waves-effect twitter"><i class="fa fa-twitter"></i></a></li>
+                               <li><a href="#" class="plus_round"><i class="ion-plus-round"></i></a></li>
+                           </ul>  
+                           <p>In the last 10 years Americans have seen a boom in local food markets and for good reason. While Americans continue to buy more fast food, they still expect perfect ingredients and they are finding them.</p>
+                           <p>So why are they turning to their local markets more and more? In a nutshell they want fresh, healthy produce with great flavor. There are numerous other benefits to buying local products and it would seem Americans are now rediscovering what their local growers have to offer. FRESHER</p>
+                        </div> 
+                   </div>
+                   
+                    <div class="like_comment_area row"> 
+                        <div class="col s6 updown_btn comment_c"> 
+                            <a href="#"><i class="ion-ios-chatboxes-outline"></i></a> 
+                            <a href="#" class="count_n">14 comments</a>
+                        </div>  
+                        <div class="col s6 updown_btn"> 
+                            <a href="#"><i class="ion-android-arrow-dropdown-circle"></i></a>
+                            <a href="#"><i class="ion-android-arrow-dropup-circle"></i></a> 
+                            <a href="#" class="count_n">483</a>
+                        </div>
+                        <div class="col s12 comment_input_box"> 
+                            <div class="input-field comment_input">
+                                <input placeholder="Placeholder" type="text" class="validate">  
+                                <i class="ion-camera"></i>
+                                <span>Post</span>
+                            </div> 
+                        </div>
+                        <div class="col p0 s12"> 
+                            <div class="media"> 
+                                <img src="../../static/images/comment-a.jpg" alt="" class="circle responsive-img">
+                                <div class="media_body">
+                                    <h4><a href="#">Masum Rana</a>5 minutes ago</h4>
+                                    <p>Care for fresher ingredients? Locally grown items are usually harvested 1 or 2 days before hitting the market making them significantly fresher then traditional store bought ingredients</p>
+                                    <span><a href=""><i class="ion-ios-arrow-thin-up"></i></a>483<a href="#"><i class="ion-ios-arrow-thin-down"></i></a></span>
+                                    <a href="#" class="replay_btn">Reply</a> 
+                                    <div class="media"> 
+                                        <img src="../../static/images/comment-a.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <h4><a href="#">Masum Rana</a>5 minutes ago</h4>
+                                            <p>Locally grown items are usually harvested 1 or 2 days </p>
+                                            <span><a href=""><i class="ion-ios-arrow-thin-up"></i></a>483<a href="#"><i class="ion-ios-arrow-thin-down"></i></a></span>
+                                            <a href="#" class="replay_btn">Reply</a>
+                                        </div>
+                                    </div> 
+                                    <a href="#" class="view_mor_r">View more replies...</a>
+                                </div>
+                            </div>
+                            <a href="#" class="view_mor_c">View more comments <i class="ion-chevron-down"></i></a>
+                        </div>
+                    </div> 
+                </div><!-- End Post --> 
+                <!-- Post -->
+                <div class="post post_details">
+                   <div class="post_content"> 
+                        <a href="#" class="post_img">
+                            <img src="../../static/images/post-7.jpg" alt="">
+                        </a> 
+                        <div class="post_heding_aea">
+                            <a href="#" class="post_heding">Mother Earth Hosts Our Travels</a>
+                            <h4 class="by_author"><span>Added by</span><img src="../../static/images/author-s-2.jpg" alt="" class="circle"><a href="#">Denszel</a>5 minutes ago</h4>
+                        </div>
+                        <div class="socail_share_area row">
+                           <ul class="socail_share">
+                               <li class="share_count">2.3K</li>
+                               <li><a href="#" class="waves-effect"><i class="fa fa-facebook-square"></i></a></li>
+                               <li><a href="#" class="waves-effect twitter"><i class="fa fa-twitter"></i></a></li>
+                               <li><a href="#" class="plus_round"><i class="ion-plus-round"></i></a></li>
+                           </ul>  
+                           <p>So why are they turning to their local markets more and more? In a nutshell they want fresh, healthy produce with great flavor. There are numerous other benefits to buying local products and it would seem Americans are now</p>
+                        </div> 
+                   </div>
+                   
+                    <div class="like_comment_area row"> 
+                        <div class="col s4 updown_btn comment_c"> 
+                            <a href="#"><i class="ion-ios-chatboxes-outline"></i></a> 
+                            <a href="#" class="count_n">14 comments</a>
+                        </div>  
+                        <div class="col s8 updown_btn"> 
+                            <a href="#"><i class="ion-android-arrow-dropdown-circle"></i></a>
+                            <a href="#"><i class="ion-android-arrow-dropup-circle"></i></a> 
+                            <a href="#" class="count_n">483</a>
+                        </div>
+                        <div class="col s12 comment_input_box"> 
+                            <div class="input-field comment_input">
+                                <input placeholder="Placeholder" type="text" class="validate">  
+                                <i class="ion-camera"></i>
+                                <span>Post</span>
+                            </div> 
+                        </div>
+                        <div class="col p0 s12"> 
+                            <div class="media"> 
+                                <img src="../../static/images/comment-a-2.jpg" alt="" class="circle responsive-img">
+                                <div class="media_body">
+                                    <h4><a href="#">Emran Khan</a>5 minutes ago</h4>
+                                    <p>Care for fresher ingredients? Locally grown items are usually harvested 1 or 2 days before hitting the</p>
+                                    <span><a href=""><i class="ion-ios-arrow-thin-up"></i></a>483<a href="#"><i class="ion-ios-arrow-thin-down"></i></a></span>
+                                    <a href="#" class="replay_btn">Reply</a>  
+                                    <a href="#" class="view_mor_r">View more replies...</a>
+                                </div>
+                            </div>
+                            <a href="#" class="view_mor_c">View more comments <i class="ion-chevron-down"></i></a>
+                        </div>
+                    </div> 
+                </div><!-- End Post --> 
+                <!-- Post -->
+                <div class="post post_details">
+                   <div class="post_content"> 
+                        <a href="#" class="post_img">
+                            <img src="../../static/images/post-details-1.jpg" alt="">
+                        </a> 
+                        <div class="post_heding_aea">
+                            <a href="#" class="post_heding">Mother Earth Hosts Our Travels</a>
+                            <h4 class="by_author"><span>Added by</span><img src="../../static/images/author-s-3.jpg" alt="" class="circle"><a href="#">Ghosh</a>5 minutes ago</h4>
+                        </div>
+                        <div class="socail_share_area row">
+                           <ul class="socail_share">
+                               <li class="share_count">2.3K</li>
+                               <li><a href="#" class="waves-effect"><i class="fa fa-facebook-square"></i></a></li>
+                               <li><a href="#" class="waves-effect twitter"><i class="fa fa-twitter"></i></a></li>
+                               <li><a href="#" class="plus_round"><i class="ion-plus-round"></i></a></li>
+                           </ul>  
+                           <p>So why are they turning to their local markets more and more? In a nutshell they want fresh, healthy produce with great flavor. There are numerous other benefits to buying local products and it would seem Americans are now</p>
+                        </div> 
+                   </div>
+                   
+                    <div class="like_comment_area row"> 
+                        <div class="col s4 updown_btn comment_c"> 
+                            <a href="#"><i class="ion-ios-chatboxes-outline"></i></a> 
+                            <a href="#" class="count_n">14 comments</a>
+                        </div>  
+                        <div class="col s8 updown_btn"> 
+                            <a href="#"><i class="ion-android-arrow-dropdown-circle"></i></a>
+                            <a href="#"><i class="ion-android-arrow-dropup-circle"></i></a> 
+                            <a href="#" class="count_n">483</a>
+                        </div>
+                        <div class="col s12 comment_input_box"> 
+                            <div class="input-field comment_input">
+                                <input placeholder="Placeholder" type="text" class="validate m0">  
+                                <i class="ion-camera"></i>
+                                <span>Post</span>
+                            </div> 
+                        </div> 
+                    </div> 
+                </div><!-- End Post --> 
+                <!-- Post -->
+                <div class="post post_details">
+                   <div class="post_content"> 
+                        <a href="#" class="post_img">
+                            <img src="../../static/images/post-details-2.jpg" alt="">
+                        </a> 
+                        <div class="post_heding_aea">
+                            <a href="#" class="post_heding">The 3 Golden Rules Professional Graphic</a>
+                            <h4 class="by_author"><span>Added by</span><img src="../../static/images/author-s-3.jpg" alt="" class="circle"><a href="#">Riad</a>5 minutes ago</h4>
+                        </div>
+                        <div class="socail_share_area row">
+                           <ul class="socail_share p0">
+                               <li class="share_count">2.3K</li>
+                               <li><a href="#" class="waves-effect"><i class="fa fa-facebook-square"></i></a></li>
+                               <li><a href="#" class="waves-effect twitter"><i class="fa fa-twitter"></i></a></li>
+                               <li><a href="#" class="plus_round"><i class="ion-plus-round"></i></a></li>
+                           </ul>   
+                        </div> 
+                   </div>
+                   
+                    <div class="like_comment_area row"> 
+                        <div class="col s4 updown_btn comment_c"> 
+                            <a href="#"><i class="ion-ios-chatboxes-outline"></i></a> 
+                            <a href="#" class="count_n">14 comments</a>
+                        </div>  
+                        <div class="col s8 updown_btn"> 
+                            <a href="#"><i class="ion-android-arrow-dropdown-circle"></i></a>
+                            <a href="#"><i class="ion-android-arrow-dropup-circle"></i></a> 
+                            <a href="#" class="count_n">483</a>
+                        </div>
+                        <div class="col s12 comment_input_box"> 
+                            <div class="input-field comment_input">
+                                <input placeholder="Placeholder" type="text" class="validate m0">  
+                                <i class="ion-camera"></i>
+                                <span>Post</span>
+                            </div> 
+                        </div> 
+                    </div> 
+                </div><!-- End Post --> 
+                <!-- Post -->
+                <div class="post post_details">
+                   <div class="post_content">
+                       <div class="next_btn_col">
+                           <a href="#" class="next_btn waves-effect">Next Page (10/22)</a>
+                       </div>
+                        <div class="row author_area"> 
+                            <div class="col s1 btn_floating"> 
+                                <a class="btn-floating waves-effect"><i class="ion-navicon-round"></i></a>
+                            </div> 
+                            <div class="col s6 like_user">
+                                <ul class="like_img">
+                                    <li><a href="#" class="single_l_1"><img src="../../static/images/like-client-1.png" alt=""></a></li>
+                                    <li><a href="#" class="single_l"><img src="../../static/images/like-client-2.png" alt=""></a></li>
+                                    <li><a href="#" class="single_l"><img src="../../static/images/like-client-3.png" alt=""></a></li>
+                                    <li><a href="#" class="single_l"><img src="../../static/images/like-client-4.png" alt=""></a></li>
+                                    <li><a href="#" class="mor_like">257 people added list</a></li>  
+                                </ul>  
+                            </div>
+                            <div class="col s5 add_btn_col">
+                                <a href="#" class="add_btn waves-effect">Add open list</a>
+                            </div>
+                        </div> 
+                        <div class="socail_share_area row">
+                           <ul class="socail_share">
+                               <li class="share_count">2.3K</li>
+                               <li><a href="#" class="waves-effect"><i class="fa fa-facebook-square"></i></a></li>
+                               <li><a href="#" class="waves-effect twitter"><i class="fa fa-twitter"></i></a></li>
+                               <li><a href="#" class="plus_round"><i class="ion-plus-round"></i></a></li>
+                           </ul>   
+                        </div> 
+                   </div> 
+                    <div class="like_comment_area p0 row">   
+                        <div class="col s12 updown_btn updown_btn_2"> 
+                            <a href="#"><i class="ion-android-arrow-dropdown-circle"></i></a>
+                            <a href="#" class="count_n">483</a>
+                            <a href="#"><i class="ion-android-arrow-dropup-circle"></i></a> 
+                        </div> 
+                    </div> 
+                </div><!-- End Post -->
+                
+                <!-- Sponsored Stories --> 
+                <div class="sponsored_stories row">
+                    <h2 class="sponsored_tittle sponsored_t_2">Sponsored Stories <span>Taboola ads</span></h2>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-1.jpg" alt="">
+                        <a href="#">Family Safari Vacation To The Home Of The Gods</a>
+                        <h6>viralvideo</h6>
+                    </div>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-2.jpg" alt="">
+                        <a href="#">How To Achieve Victory In A Cooking Contest</a>
+                        <h6>ozzy man reviews</h6>
+                    </div>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-3.jpg" alt="">
+                        <a href="#">Southern Cooking Brings Soul To Food</a>
+                        <h6>facebook</h6>
+                    </div>
+                </div>
+                <div class="sponsored_stories row">
+                    <h2 class="sponsored_tittle">Popular On Open List</h2>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-4.jpg" alt="">
+                        <a href="#">From Wetlands To Canals And Dams Amsterdam Is</a>
+                        <h6>5 days ago</h6>
+                    </div>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-5.jpg" alt="">
+                        <a href="#">Mg Shadow Computer Monitoring Software A </a>
+                        <h6>2 hours ago</h6>
+                    </div>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-6.jpg" alt="">
+                        <a href="#">The Skinny On Lcd Monitors Monitors</a>
+                        <h6>3 month ago</h6>
+                    </div>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-2.jpg" alt="">
+                        <a href="#">Online Games How To Play To Win</a>
+                        <h6>4 days ago</h6>
+                    </div>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-7.jpg" alt="">
+                        <a href="#">Are You Ready To Buy A Home Theater Audio</a>
+                        <h6>2 hours ago</h6>
+                    </div>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-8.jpg" alt="">
+                        <a href="#">Computer Forensics Finding Out What The Bad</a>
+                        <h6>6 days ago</h6>
+                    </div>
+                </div>
+                <div class="sponsored_stories row sponsored_end">
+                    <h2 class="sponsored_tittle">Featured Contents</h2>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-6.jpg" alt="">
+                        <a href="#">Como Mantener Tu Salud Mental</a>
+                        <h6>5 days ago</h6>
+                    </div>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-9.jpg" alt="">
+                        <a href="#">Helen Keller A Teller And A Seller</a>
+                        <h6>2 hours ago</h6>
+                    </div>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-10.jpg" alt="">
+                        <a href="#">Do You Think Motivational Thoughts</a>
+                        <h6>3 month ago</h6>
+                    </div>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-11.jpg" alt="">
+                        <a href="#">Hypnosis Quit Smoking Techniques</a>
+                        <h6>4 days ago</h6>
+                    </div>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-12.jpg" alt="">
+                        <a href="#">Dream Interpretation Common Symbols And</a>
+                        <h6>2 hours ago</h6>
+                    </div>
+                    <div class="col m4 s6 sponsored">
+                        <img src="../../static/images/sponsored/sponsored-4.jpg" alt="">
+                        <a href="#">Going Wireless With Your Headphones</a>
+                        <h6>6 days ago</h6>
+                    </div>
+                </div> 
+                <!-- Post -->
+                <div class="post post_details"> 
+                    <div class="like_comment_area row"> 
+                        <div class="col s4 updown_btn comment_c"> 
+                            <a href="#"><i class="ion-ios-chatboxes-outline"></i></a> 
+                            <a href="#" class="count_n">14 comments</a>
+                        </div>   
+                        <div class="col s12 comment_input_box"> 
+                            <div class="input-field comment_input">
+                                <input placeholder="Placeholder" type="text" class="validate">  
+                                <i class="ion-camera"></i>
+                                <span>Post</span>
+                            </div> 
+                        </div>
+                        <div class="col p0 s12"> 
+                            <div class="media"> 
+                                <img src="../../static/images/comment-a.jpg" alt="" class="circle responsive-img">
+                                <div class="media_body">
+                                    <h4><a href="#">Masum Rana</a>5 minutes ago</h4>
+                                    <p>Care for fresher ingredients? Locally grown items are usually harvested 1 or 2 days before hitting the market making them significantly fresher then traditional store bought ingredients</p>
+                                    <span><a href=""><i class="ion-ios-arrow-thin-up"></i></a>483<a href="#"><i class="ion-ios-arrow-thin-down"></i></a></span>
+                                    <a href="#" class="replay_btn">Reply</a> 
+                                    <div class="media"> 
+                                        <img src="../../static/images/comment-a.jpg" alt="" class="circle responsive-img">
+                                        <div class="media_body">
+                                            <h4><a href="#">Masum Rana</a>5 minutes ago</h4>
+                                            <p>Locally grown items are usually harvested 1 or 2 days </p>
+                                            <span><a href=""><i class="ion-ios-arrow-thin-up"></i></a>483<a href="#"><i class="ion-ios-arrow-thin-down"></i></a></span>
+                                            <a href="#" class="replay_btn">Reply</a>
+                                        </div>
+                                    </div> 
+                                    <a href="#" class="view_mor_r">View more replies...</a>
+                                </div>
+                            </div>
+                            <a href="#" class="load_more">Load more comments</a>
+                        </div>
+                    </div> 
+                </div><!-- End Post --> 
+            </div>
+            <!-- left side bar -->
+            <div class="col">
+                <div class="left_side_bar">
+                    <div class="categories">
+                        <h3 class="categories_tittle">Post Categories</h3>
+                        <ul class="categories_icon"> 
+                            <li><a class="tooltip" data-balloon="Rate Post" data-balloon-pos="up"><i class="ion-ios-star"></i></a></li> 
+                            <li><a href="#" class="tooltip" data-balloon="Time Post" data-balloon-pos="up"><i class="ion-android-time"></i></a></li>
+                            <li><a href="#" class="tooltip" data-balloon="Music Post" data-balloon-pos="up"><img src="../../static/images/icons/sound.png" alt=""></a></li>
+                            <li><a href="#" class="tooltip" data-balloon="Images Post" data-balloon-pos="up"><i class="ion-android-image"></i></a></li>
+                            <li><a href="#" class="tooltip" data-balloon="chart Post" data-balloon-pos="up"><i class="large material-icons">insert_chart</i></a></li>  
+                        </ul>
+                    </div>
+                    <div class="interests">
+                        <h3 class="categories_tittle">Your Interests <span>Edit</span></h3> 
+                        <ul class="interests_list">
+                            <li><a href="#"><i class="ion-android-radio-button-off"></i>Arts</a></li>
+                            <li><a href="#"><i class="ion-android-radio-button-off"></i>Beauty</a></li>
+                            <li><a href="#"><i class="ion-android-radio-button-off"></i>Entertainment</a></li>
+                            <li><a href="#"><i class="ion-android-radio-button-off"></i>Travel</a></li>
+                            <li><a href="#"><i class="ion-android-radio-button-off"></i>Personal</a></li>
+                            <li><a href="#"><i class="ion-android-radio-button-off"></i>Politics</a></li>
+                            <li><a href="#"><i class="ion-android-radio-button-off"></i>Space Science</a></li>
+                        </ul>
+                    </div>
+                    <div class="profile">
+                        <h3 class="categories_tittle">Profile <span>Edit</span></h3> 
+                        <ul class="profile_pic">
+                            <li><a href=""><img src="../../static/images/profile-1.jpg" alt="" class="circle"></a></li>
+                            <li><a href=""><img src="../../static/images/profile-2.jpg" alt="" class="circle"></a></li>
+                            <li><a href=""><img src="../../static/images/profile-3.jpg" alt="" class="circle"></a></li>
+                            <li><a href=""><img src="../../static/images/profile-4.jpg" alt="" class="circle"></a></li>
+                            <li><a href=""><img src="../../static/images/profile-5.jpg" alt="" class="circle"></a></li>
+                            <li><a href=""><img src="../../static/images/profile-6.jpg" alt="" class="circle"></a></li>
+                            <li><a href=""><img src="../../static/images/profile-7.jpg" alt="" class="circle"></a></li>
+                            <li><a href=""><img src="../../static/images/profile-8.jpg" alt="" class="circle"></a></li>
+                            <li><a href=""><img src="../../static/images/profile-9.jpg" alt="" class="circle"></a></li>
+                            <li><a href=""><img src="../../static/images/profile-10.jpg" alt="" class="circle"></a></li>
+                        </ul>
+                    </div>
+                    <div class="badges">
+                        <h3 class="categories_tittle">Badges</h3> 
+                        <ul class="badges_list">
+                            <li><a href="#"><i class="ion-bonfire"></i><span>6</span></a></li>
+                            <li><a href="#"><i class="ion-bluetooth"></i></a></li>
+                            <li><a href="#"><i class="ion-coffee"></i></a></li>
+                            <li><a href="#"><i class="ion-clock"></i> <span>3</span></a></li>
+                            <li><a href="#"><i class="ion-camera"></i></a></li>
+                            <li><a href="#"><i class="ion-ios-bell-outline"></i><span>2</span></a></li>
+                            <li><a href="#"><i class="ion-bluetooth"></i></a></li>
+                            <li><a href="#"><i class="ion-coffee"></i></a></li>
+                            <li><a href="#"><i class="ion-clock"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="calendar_widget">
+                        <h3 class="categories_tittle">Calendar</h3> 
+                        <table class="calendar"></table>
+                    </div>
+                    <div class="social_Sharing">
+                        <h3 class="categories_tittle">Social Sharing</h3>  
+                        <ul class="social_icon">
+                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#" class="tumblr"><i class="ion-social-tumblr"></i></a></li>
+                            <li><a href="#" class="googleplus"><i class="ion-social-googleplus"></i></a></li>
+                            <li><a href="#" class="pinterest"><i class="ion-social-pinterest"></i></a></li>
+                            <li><a href="#" class="facebook"><i class="ion-social-facebook"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="advertis">
+                        <a href="#"><img src="../../static/images/advertis.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Right side bar -->
+            <div class="right_side_bar col">
+                <div class="right_sidebar_iner">
+                    <a href="#"> 
+                        <img src="../../static/images/advertis-2.jpg" alt="" class="responsive-img">
+                    </a>
+                    <div class="popular_posts">
+                        <h3 class="categories_tittle">Popular Posts</h3>  
+                        <div class="row valign-wrapper popular_item">
+                            <div class="col s3 p_img">
+                               <a href="#"> 
+                                    <img src="../../static/images/recent-post-1.jpg" alt="" class="circle responsive-img">
+                               </a>
+                            </div>
+                            <div class="col s9 p_content">
+                               <a href="#">Poster can be one of the effective marketing and advertising materials.</a>
+                                <span class="black_text">2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="row valign-wrapper popular_item">
+                            <div class="col s3 p_img">
+                               <a href="#"> 
+                                    <img src="../../static/images/recent-post-2.jpg" alt="" class="circle responsive-img">
+                               </a>
+                            </div>
+                            <div class="col s9 p_content">
+                               <a href="#">Color is so powerful that it can persuade, motivate, inspire and touch</a>
+                                <span class="black_text">3 days ago</span>
+                            </div>
+                        </div>
+                        <div class="row valign-wrapper popular_item">
+                            <div class="col s3 p_img">
+                               <a href="#"> 
+                                    <img src="../../static/images/recent-post-3.jpg" alt="" class="circle responsive-img">
+                               </a>
+                            </div>
+                            <div class="col s9 p_content">
+                               <a href="#">What makes one logo better than another?</a>
+                                <span class="black_text">4 days ago</span>
+                            </div>
+                        </div>
+                        <div class="row valign-wrapper popular_item">
+                            <div class="col s3 p_img">
+                               <a href="#"> 
+                                    <img src="../../static/images/recent-post-4.jpg" alt="" class="circle responsive-img">
+                               </a>
+                            </div>
+                            <div class="col s9 p_content">
+                               <a href="#">Outdoor advertising is a low budget and effective way of advertising a </a>
+                                <span class="black_text">5 days ago</span>
+                            </div>
+                        </div>
+                        <div class="row valign-wrapper popular_item">
+                            <div class="col s3 p_img">
+                               <a href="#"> 
+                                    <img src="../../static/images/recent-post-5.jpg" alt="" class="circle responsive-img">
+                               </a>
+                            </div>
+                            <div class="col s9 p_content">
+                               <a href="#">Famous is as famous does and the famous get known through publicity. </a>
+                                <span class="black_text">10 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular_gallery row"> 
+                        <h3 class="categories_tittle">Images</h3> 
+                        <div class="col s4 p_img"><a href="#"><img src="../../static/images/gallery/gallry-s-10.jpg" alt=""></a></div>
+                        <div class="col s4 p_img"><a href="#"><img src="../../static/images/gallery/gallry-s-11.jpg" alt=""></a></div>
+                        <div class="col s4 p_img"><a href="#"><img src="../../static/images/gallery/gallry-s-12.jpg" alt=""></a></div>
+                        <div class="col s4 p_img"><a href="#"><img src="../../static/images/gallery/gallry-s-13.jpg" alt=""></a></div>
+                        <div class="col s4 p_img"><a href="#"><img src="../../static/images/gallery/gallry-s-14.jpg" alt=""></a></div>
+                        <div class="col s4 p_img"><a href="#"><img src="../../static/images/gallery/gallry-s-15.jpg" alt=""></a></div>
+                        <div class="col s4 p_img"><a href="#"><img src="../../static/images/gallery/gallry-s-16.jpg" alt=""></a></div>
+                        <div class="col s4 p_img"><a href="#"><img src="../../static/images/gallery/gallry-s-17.jpg" alt=""></a></div>
+                        <div class="col s4 p_img"><a href="#"><img src="../../static/images/gallery/gallry-s-18.jpg" alt=""></a></div>
+                    </div>
+                    <div class="trending_area">
+                        <h3 class="categories_tittle">Trending</h3> 
+                        <ul class="collapsible trending_collaps" data-collapsible="accordion">
+                            <li>
+                                <div class="collapsible-header"><i class="ion-chevron-right"></i>Healthy Environment For Self Esteem</div>
+                                <div class="collapsible-body">
+                                    <div class="row collaps_wrpper"> 
+                                        <div class="col s1 media_l">
+                                            <b>1</b>
+                                            <i class="ion-android-arrow-dropdown-circle"></i>
+                                        </div>
+                                        <div class="col s11 media_b">
+                                            <a href="#" class="close_btn"><i class="ion-close-round"></i></a>
+                                            <p>If you will be traveling for a ski vacation, it is often difficult to know what to pack. You may not even have a problem knowing what to pack, but instead have</p>
+                                            <h6>By <a href="#">Thomas Omalley</a></h6>
+                                        </div>
+                                    </div>
+                                    <div class="row collaps_wrpper collaps_2">
+                                        <div class="col s1 media_l">
+                                            <b>1</b>
+                                            <i class="ion-android-arrow-dropdown-circle"></i>
+                                        </div>
+                                        <div class="col s11 media_b">
+                                            <a href="#" class="close_btn"><i class="ion-close-round"></i></a>
+                                            <p>The Emerald Buddha is a figurine of a sitting Budha, that is the is the palladium</p>
+                                            <h6>By <a href="#">Thomas Omalley</a></h6>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="ion-chevron-right"></i>Burn The Ships</div>
+                                <div class="collapsible-body">
+                                    <div class="row collaps_wrpper"> 
+                                        <div class="col s1 media_l">
+                                            <b>1</b>
+                                            <i class="ion-android-arrow-dropdown-circle"></i>
+                                        </div>
+                                        <div class="col s11 media_b">
+                                            <a href="#" class="close_btn"><i class="ion-close-round"></i></a>
+                                            <p>If you will be traveling for a ski vacation, it is often difficult to know what to pack. You may not even have a problem knowing what to pack, but instead have</p>
+                                            <h6>By <a href="#">Thomas Omalley</a></h6>
+                                        </div>
+                                    </div>
+                                    <div class="row collaps_wrpper collaps_2">
+                                        <div class="col s1 media_l">
+                                            <b>1</b>
+                                            <i class="ion-android-arrow-dropdown-circle"></i>
+                                        </div>
+                                        <div class="col s11 media_b">
+                                            <a href="#" class="close_btn"><i class="ion-close-round"></i></a>
+                                            <p>The Emerald Buddha is a figurine of a sitting Budha, that is the is the palladium</p>
+                                            <h6>By <a href="#">Thomas Omalley</a></h6>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header active"><i class="ion-chevron-right"></i>Harness The Power Of Your Dreams</div>
+                                <div class="collapsible-body">
+                                    <div class="row collaps_wrpper"> 
+                                        <div class="col s1 media_l">
+                                            <b>1</b>
+                                            <i class="ion-android-arrow-dropdown-circle"></i>
+                                        </div>
+                                        <div class="col s11 media_b">
+                                            <a href="#" class="close_btn"><i class="ion-close-round"></i></a>
+                                            <p>If you will be traveling for a ski vacation, it is often difficult to know what to pack. You may not even have a problem knowing what to pack, but instead have</p>
+                                            <h6>By <a href="#">Thomas Omalley</a></h6>
+                                        </div>
+                                    </div>
+                                    <div class="row collaps_wrpper collaps_2">
+                                        <div class="col s1 media_l">
+                                            <b>1</b>
+                                            <i class="ion-android-arrow-dropdown-circle"></i>
+                                        </div>
+                                        <div class="col s11 media_b">
+                                            <a href="#" class="close_btn"><i class="ion-close-round"></i></a>
+                                            <p>The Emerald Buddha is a figurine of a sitting Budha, that is the is the palladium</p>
+                                            <h6>By <a href="#">Thomas Omalley</a></h6>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="ion-chevron-right"></i>Don T Let The Outtakes Take You Out</div>
+                                <div class="collapsible-body">
+                                    <div class="row collaps_wrpper"> 
+                                        <div class="col s1 media_l">
+                                            <b>1</b>
+                                            <i class="ion-android-arrow-dropdown-circle"></i>
+                                        </div>
+                                        <div class="col s11 media_b">
+                                            <a href="#" class="close_btn"><i class="ion-close-round"></i></a>
+                                            <p>If you will be traveling for a ski vacation, it is often difficult to know what to pack. You may not even have a problem knowing what to pack, but instead have</p>
+                                            <h6>By <a href="#">Thomas Omalley</a></h6>
+                                        </div>
+                                    </div>
+                                    <div class="row collaps_wrpper collaps_2">
+                                        <div class="col s1 media_l">
+                                            <b>1</b>
+                                            <i class="ion-android-arrow-dropdown-circle"></i>
+                                        </div>
+                                        <div class="col s11 media_b">
+                                            <a href="#" class="close_btn"><i class="ion-close-round"></i></a>
+                                            <p>The Emerald Buddha is a figurine of a sitting Budha, that is the is the palladium</p>
+                                            <h6>By <a href="#">Thomas Omalley</a></h6>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="ion-chevron-right"></i>Helen Keller A Teller And A Seller</div>
+                                <div class="collapsible-body"> 
+                                    <div class="row collaps_wrpper collaps_2">
+                                        <div class="col s1 media_l">
+                                            <b>1</b>
+                                            <i class="ion-android-arrow-dropdown-circle"></i>
+                                        </div>
+                                        <div class="col s11 media_b">
+                                            <a href="#" class="close_btn"><i class="ion-close-round"></i></a>
+                                            <p>The Emerald Buddha is a figurine of a sitting Budha, that is the is the palladium</p>
+                                            <h6>By <a href="#">Thomas Omalley</a></h6>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Min Container area --> 
+    
+    <!-- Footer area -->
+    <footer class="footer_area">
+        <div class="footer_row row">
+            <div class="col l3 m6 footer_col">
+                <div class="popular_posts">
+                    <h3 class="categories_tittle">Popular Posts</h3>  
+                    <div class="row valign-wrapper popular_item">
+                        <div class="col s3 p_img">
+                           <a href="#"> 
+                                <img src="../../static/images/recent-post-1.jpg" alt="" class="circle responsive-img">
+                           </a>
+                        </div>
+                        <div class="col s9 p_content">
+                           <a href="#">Poster can be one of the <br> effective marketing and </a>
+                            <span class="black_text">2 days ago</span>
+                        </div>
+                    </div>
+                    <div class="row valign-wrapper popular_item">
+                        <div class="col s3 p_img">
+                           <a href="#"> 
+                                <img src="../../static/images/recent-post-2.jpg" alt="" class="circle responsive-img">
+                           </a>
+                        </div>
+                        <div class="col s9 p_content">
+                           <a href="#">Color is so powerful that it can persuade, motivate, inspire</a>
+                            <span class="black_text">3 days ago</span>
+                        </div>
+                    </div>
+                    <div class="row valign-wrapper popular_item">
+                        <div class="col s3 p_img">
+                           <a href="#"> 
+                                <img src="../../static/images/recent-post-3.jpg" alt="" class="circle responsive-img">
+                           </a>
+                        </div>
+                        <div class="col s9 p_content">
+                           <a href="#">What makes one logo better than another?</a>
+                            <span class="black_text">4 days ago</span>
+                        </div>
+                    </div> 
+                </div>
+            </div> 
+            <div class="col l3 m6 footer_col footer_trending"> 
+                <h3 class="categories_tittle">Trending</h3> 
+                <div class="trending_area">
+                    <ul class="collapsible trending_collaps" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header"><i class="ion-chevron-right"></i>Healthy Environment For Self Esteem</div>
+                            <div class="collapsible-body">
+                                <div class="row collaps_wrpper"> 
+                                    <div class="col s1 media_l">
+                                        <b>1</b>
+                                        <i class="ion-android-arrow-dropup-circle"></i>
+                                    </div>
+                                    <div class="col s11 media_b">
+                                        <a href="#" class="close_btn"><i class="ion-close-round"></i></a>
+                                        <p>If you will be traveling for a ski vacation, it is often difficult to know what to pack. You may not even have a problem</p>
+                                        <h6>By <a href="#">Thomas Omalley</a></h6>
+                                    </div>
+                                </div> 
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="ion-chevron-right"></i>Burn The Ships</div>
+                            <div class="collapsible-body">
+                                <div class="row collaps_wrpper"> 
+                                    <div class="col s1 media_l">
+                                        <b>1</b>
+                                        <i class="ion-android-arrow-dropup-circle"></i>
+                                    </div>
+                                    <div class="col s11 media_b">
+                                        <a href="#" class="close_btn"><i class="ion-close-round"></i></a>
+                                        <p>If you will be traveling for a ski vacation, it is often difficult to know what to pack. You may not even have a problem</p>
+                                        <h6>By <a href="#">Thomas Omalley</a></h6>
+                                    </div>
+                                </div> 
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header active"><i class="ion-chevron-right"></i>Harness The Power Of Your Dreams</div>
+                            <div class="collapsible-body">
+                                <div class="row collaps_wrpper"> 
+                                    <div class="col s1 media_l">
+                                        <b>1</b>
+                                        <i class="ion-android-arrow-dropup-circle"></i>
+                                    </div>
+                                    <div class="col s11 media_b">
+                                        <a href="#" class="close_btn"><i class="ion-close-round"></i></a>
+                                        <p>If you will be traveling for a ski vacation, it is often difficult to know what to pack. You may not even have a problem</p>
+                                        <h6>By <a href="#">Thomas Omalley</a></h6>
+                                    </div>
+                                </div> 
+                            </div>
+                        </li> 
+                    </ul> 
+                </div>
+            </div> 
+            <div class="col l3 m6 footer_col">
+                <div class="badges">
+                    <h3 class="categories_tittle">Badges</h3> 
+                    <ul class="badges_list">
+                        <li><a href="#"><i class="ion-bonfire"></i><span>6</span></a></li>
+                        <li><a href="#"><i class="ion-bluetooth"></i></a></li>
+                        <li><a href="#"><i class="ion-coffee"></i></a></li>
+                        <li><a href="#"><i class="ion-clock"></i> <span>3</span></a></li>
+                        <li><a href="#"><i class="ion-camera"></i></a></li>
+                        <li><a href="#"><i class="ion-ios-bell-outline"></i><span>2</span></a></li>
+                        <li><a href="#"><i class="ion-bluetooth"></i></a></li>
+                        <li><a href="#"><i class="ion-coffee"></i></a></li>
+                        <li><a href="#"><i class="ion-clock"></i></a></li>
+                    </ul>
+                </div>
+                
+                <div class="social_Sharing">
+                    <h3 class="categories_tittle">Social Sharing</h3>  
+                    <ul class="social_icon">
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="#" class="tumblr"><i class="ion-social-tumblr"></i></a></li>
+                        <li><a href="#" class="googleplus"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="#" class="pinterest"><i class="ion-social-pinterest"></i></a></li>
+                        <li><a href="#" class="facebook"><i class="ion-social-facebook"></i></a></li>
+                    </ul>
+                </div>
+            </div> 
+            <div class="col l3 m6 footer_col">
+                <img src="../../static/images/advertis-3.jpg" alt="" class="responsive-img">
+            </div> 
+        </div>
+        <div class="copy_right">
+            © 2018 <a href="#">Open List</a>. All rights reserved.
+        </div>
+    </footer> 
+    <!-- End Footer area --> 
+    
+    <!-- Add post poup area --> 
+    <div id="post_modal" class="add_post modal">
+        <h2>Create A New Post</h2> 
+        <form class="input_group"> 
+            <div class="input-field">
+                <input  type="text" class="validate" placeholder="Add a tittle"> 
+                <textarea class="textarea" placeholder="Add some description"></textarea>
+            </div> 
+            <div class="upload_photo row"> 
+                <ul class="tabs tab_nav">
+                    <li class="tab col s6"><a href="#photo"><i class="ion-ios-camera"></i>Add Photo</a></li>
+                    <li class="tab col s6"><a class="" href="#video"><i class="ion-ios-videocam"></i>Add video</a></li> 
+                </ul> 
+                <div id="photo" class="col s12 tabs_content">
+                    <div class="photo_u">
+                        <img src="../../static/images/upload.png" alt="">
+                        <h4>Select files to upload <small>or drag &amp; drop files</small></h4>
+                    </div>
+                </div>
+                <div id="video" class="col s12 tabs_content"> 
+                    <div class="photo_u">
+                        <img src="../../static/images/upload.png" alt="">
+                        <h4>Select files to upload <small>or drag &amp; drop files</small></h4>
+                    </div>
+                </div> 
+            </div> 
+            <div class="input-field col s12 select_option">
+                <select> 
+                    <option value="" disabled selected>Choose a category</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option> 
+                    <option value="2">Option 2</option> 
+                    <option value="2">Option 2</option> 
+                </select> 
+                
+                <div class="chips chips-placeholder" data-index="0" data-initialized="true">
+                    <input class="input" placeholder="Enter a tag">
+                </div> 
+            </div> 
+            <div class="input-field add_link">
+                <input  type="text" class="validate" placeholder="Add a link">
+                <span>optional</span>
+            </div>
+            <div class="yes_no">
+                <h4>Anyone can submit?</h4>
+                <div class="flipswitch"></div>
+            </div>
+            <div class="row submit_btn_area"> 
+               <div class="col s6"> 
+                    <button class="waves-effect"><i class="ion-folder"></i>Save draft</button>
+               </div>
+               <div class="col s6"> 
+                    <button class="waves-effect col s6"><i class="ion-eye"></i>Preview post</button>
+               </div>
+               <div class="col s12"> 
+                    <button class="waves-effect publish">Publish</button>
+               </div>
+            </div>
+        </form> 
+    </div>
+    <!-- End Add post poup area --> 
+    
+    <!-- jQuery JS -->
+    <script src="../../static/js/jquery-3.3.1.min.js"></script>
+    <!-- Materialize JS -->
+    <script src="../../static/js/materialize.min.js"></script>
+    <!-- Calendar JS -->
+    <script src="../../static/vendors/calendar/dcalendar.picker.js"></script>
+    <!-- Load JS -->
+    <script src="../../static/vendors/infinite-scroll/jquery.jscroll.js"></script>
+    <!-- Check Button js -->
+    <script src="../../static/vendors/check-button/jquery.jqflipswitch.min.js"></script>
+    <script src="../../static/vendors/check-button/jquery.jqflipswitch.js"></script>
+    <!-- Theme JS -->
+    <script src="../../static/js/theme.js"></script>
+</body>
+</html>

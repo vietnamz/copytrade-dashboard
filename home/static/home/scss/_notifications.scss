@@ -1,0 +1,174 @@
+/* Notifications */
+.notifications_area{
+    display: block;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    background: #eff3f5;
+}
+.notifications{
+    max-width: 680px;
+    margin: 0 auto;  
+    box-shadow: 0px -2px 18px 0px rgba(0, 36, 90, 0.1);  
+    border-radius: 5px; 
+//    overflow: hidden;
+    
+    .hed_notic{
+        font: 700 18px/55px $lato;
+        color: $h;
+        min-height: auto;
+        background: #fff;
+        padding: 0 20px; 
+        span{
+            color: $h;
+            display: inline-block;
+            padding: 0;
+            float: right;
+            font-size: 14px;
+            line-height: 55px;
+            i{
+                margin-left: 15px;
+                display: inline-block;
+                font-size: 20px;
+            }
+        }
+    }
+    .notifications_content{  
+        li{
+            line-height: 50px;
+            background-color: transparent;  
+            padding: 0;  
+            .media{
+                border-bottom: 1px solid #e0e9ed;
+                padding: 21px;
+                background: #f9fbfc;
+                width: 100%; 
+                &.seen{
+                    background: #fff;
+                }
+                img{
+                    width: 46px;
+                    height: 46px;
+                }
+                .media_body{
+                    p{
+                        font: 400 15px/22px $lato;
+                        color: $p;
+                        margin-top: -2px;
+                        b{
+                            color: $h;
+                            font: 400 15px/22px $lato;
+                        }
+                        small{
+                            color: $hover;
+                            font: 400 15px/22px $lato;
+                        }
+                    }
+                    h6{
+                        font: 400 14px/1 $lato;
+                        color: $p;
+                        padding-top: 10px;
+                    }
+                }
+            }
+        } 
+    }
+
+
+    .follow{    
+        .media{
+            background: #fff !important;
+            .w_img{
+                width: 60px;
+            }
+            .media_body{
+                h6{
+                    float: left; 
+                }
+                .btn_group{
+                    float: right;
+                    line-height: 1;
+                    padding-top: 5px;
+                    span{
+                        text-align: center;
+                        min-width: 70px;
+                        padding: 0 15px;
+                        display: inline-block;
+                        background: #c0c9d0;
+                        font: 900 11px/25px $lato;
+                        color: #fff;
+                        border-radius: 5px;
+                        text-transform: uppercase;
+                        border: 0;
+                        box-shadow: none;
+                        &.follow_b{
+                            background: $hover;
+                        }
+                        i{
+                            line-height: 25px;
+                            font-size: 14px;
+                        }
+                        &.confirm{
+                            background: #44d775;
+                            min-width: 110px;
+                        }
+                        &.close_b{
+                            background: #f63c3c;
+                            min-width: 110px;
+                        }
+                    }
+                }
+            }
+        } 
+        .block_list{
+            .media{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                .media_body{
+                    p{
+                        display: inline-block;
+                    }
+                    .btn_group{
+                        padding-top: 12px;
+                         span{
+                            min-width: 110px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* End Notifications */
+
+/* Read Latter Pages */
+.read_latter{
+    margin-top: 14px;
+    .hed_notic{
+        font-size: 26px;
+        line-height: 80px; 
+        border-bottom: 2px solid #f2f6f8;
+    }
+    .notifications_content{ 
+        li .media{
+            background: #fff;
+            @include transition;
+            &:hover, &:focus{
+                background: #f2f6f8;
+            }
+             
+             img{
+                height: 100px;
+                width: 100px;
+            }
+            .media_body{
+                p{
+                    font-size: 20px;
+                    line-height: 30px;
+                    font-weight: 700;
+                    color: #263843;
+                }
+            }
+        }
+    }
+}

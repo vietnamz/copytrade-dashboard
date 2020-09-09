@@ -1,0 +1,53 @@
+/*Prefix Styles*/
+.m0{margin: 0 !important;}
+.p0{padding: 0 !important;}
+
+body{
+	font-family: $lato; 
+    h1,h2,h3,h4,h5,h6{
+        margin: 0;
+    }
+	p{
+		font-family: $lato;
+		line-height: 30px;
+		color: $p;
+        margin: 0; 
+	}
+    ul{
+        margin: 0;
+        padding: 0;
+    } 
+
+	/*Section Fix*/
+	section, header, footer{
+		&.row{            
+			margin: 0; 
+		}
+	} 
+    
+    .media{ 
+        display: flex; 
+        align-items: flex-start;
+        .media_body{
+            margin-left: 20px;
+            flex: 1; 
+        }
+    }
+}
+/*Ancore*/
+a,.btn,button{
+    outline: none;
+    @include transition;
+    &:before,&:after{
+        @include transition;
+    }
+    &:focus,&:hover{  
+        outline: none;
+        text-decoration: none;
+        @include transition; 
+    }
+}
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i{
+    height: auto;
+    line-height: normal;
+}

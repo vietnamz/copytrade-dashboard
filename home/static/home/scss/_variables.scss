@@ -1,0 +1,27 @@
+// Variables
+
+//Fonts 
+$lato: 'Lato', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900');
+
+/*Color Variables*/ 
+$bc: #eff3f5;
+$h: #263843;
+$p: #758690;
+$hover: #ff7043;
+
+// Mixins
+@mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay; 
+}
+
+// Placeholder Mixins 
+@mixin placeholder {
+    &.placeholder { @content }
+    &:-moz-placeholder { @content }
+    &::-webkit-input-placeholder { @content }
+}    
+.jscroll-loading{
+    background: transparent;
+    text-align: center;
+}

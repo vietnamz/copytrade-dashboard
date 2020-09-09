@@ -31,6 +31,7 @@ class UserNameField(forms.CharField):
         else:
             pass
 
+
 class PassworField(forms.CharField):
     def __init__(self, fieldname, *args, **kwargs):
         super(PassworField, self).__init__(*args, **kwargs)
@@ -44,7 +45,8 @@ class PassworField(forms.CharField):
                     params={'field': self.fieldname},)
         else:
             return value
-    
+
+
 class RegisterForm(forms.Form):
     user_name = UserNameField(fieldname='register', max_length=100, required=False)
     password = PassworField(fieldname='Password', widget=forms.PasswordInput())

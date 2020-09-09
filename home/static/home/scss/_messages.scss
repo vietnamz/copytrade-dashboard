@@ -1,0 +1,283 @@
+/* Messages Area */
+.messages_area{
+    background: #eff3f5;
+    padding: 30px 0 100px;
+    .messages_row{
+        max-width: 1040px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 4px;
+        display: block;
+        overflow: hidden;
+        box-shadow: 0px 0px 30px 0px rgba(0, 36, 90, 0.1);
+        .messages_heder{
+            padding: 10px 20px;
+            border-bottom: 2px solid #f2f6f8;
+            display: block;
+            overflow: hidden;
+            h2{
+                font: 700 18px/36px $lato;
+                color: #263843;
+                display: inline-block;
+            }
+            .mg_btn{
+                float: right;
+                li{
+                    display: inline-block;
+                    padding-left: 5px;
+                    a{
+                        font: 400 14px/35px $lato;
+                        text-transform: uppercase;
+                        display: inline-block;
+                        padding: 0 15px;
+                        box-shadow: none;
+                        color: #263843;
+                        background-color: transparent; 
+                        &:hover, &:focus{
+                            color: #e26139;
+                        }
+                        i{
+                            font-size: 17px;
+                            padding-right: 7px;
+                            position: relative;
+                            line-height: 1;
+                            top: 4px;
+                        }
+                        &.active{ 
+                            background: $hover;
+                            border-radius: 4px;
+                            color: #fff; 
+                            font: 900 12px/35px $lato;
+                            &:hover, &:focus{
+                                background: #e26139;
+                            }
+                        }
+                    }
+                    .setting_i{
+                        padding: 0;
+                        color: #758690; 
+                        i{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .tab_panel{ 
+            padding: 0;
+            width: 390px;
+        }
+        .search_area{
+            padding: 20px;
+            .input-field{
+                background: #eff3f5;
+                margin: 0;
+                border-radius: 4px;
+                overflow: hidden;
+                padding: 0 20px;
+                position: relative;
+                input{
+                    margin: 0;
+                    border: 0;
+                    font: 400 15px/40px $lato;
+                    color: #758690;
+                    @include placeholder{
+                        color: #758690;
+                    }
+                }
+                i{
+                    font-size: 22px;
+                    color: #758690;
+                    position: absolute;
+                    right: 20px;
+                    top: 6px;
+                    cursor: pointer;
+                    &:hover, &:focus{
+                        color: $hover;
+                    }
+                }
+            }
+        }
+        .tab_list{ 
+            display: block;
+            overflow: hidden;
+            height: auto;
+            li{
+                display: block;
+                height: auto;
+                a{
+                    padding: 20px;
+                    display: block;
+                    overflow: hidden;
+                    height: auto;  
+                    background: #f9fbfc;
+                    border-top: 1px solid #f2f6f8;  
+                    @include transition;
+                    &.seen{
+                        background: #fff;
+                    }
+                    &:hover, &:focus, &.active{
+                        background: $hover;
+                        .media h4,p,small{
+                            color: #fff !important;
+                        }
+                    }
+                    .media{
+                        text-align: left; 
+                        img{
+                            height: 46px;
+                            width: 46px;
+                        }
+                        .media_body{
+                            h4{
+                                font: 400 16px/1 $lato;
+                                color: #263843;
+                                display: block;
+                                text-transform: capitalize;
+                                small{
+                                    font-size: 14px;
+                                    color: #758690;
+                                    float: right;
+                                }
+                            }
+                            p{
+                                font: 400 15px/22px $lato;
+                                color: $p;
+                                text-transform: initial;
+                                padding-top: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .tab_content{
+            width: 650px;
+            padding: 0; 
+            border-left: 2px solid #f2f6f8;
+        }
+        .all_messages{
+            padding: 0;
+            .profile{
+                background: #f9fbfc;
+                box-shadow: 0px 3px 7px 0px rgba(0, 36, 90, 0.09);
+                padding: 10px 20px;
+                margin-bottom: 40px;
+                img{
+                    width: 60px;
+                    height: 60px;
+                }
+                .media_body{
+                    a{
+                        font: 700 20px/1 $lato;
+                        color: $h;
+                        display: block;
+                        &:hover, &:focus{
+                            color: $hover;
+                        }
+                    }
+                    p{
+                        font: 400 15px/22px $lato;
+                        color: $p;
+                        padding-top: 10px;
+                    }
+                }
+            }
+            .messages_date{
+                display: block;
+                text-align: center;
+                position: relative;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 10px;
+                    border-bottom: 1px solid #f2f6f8; 
+                }
+                h4{
+                    font: 400 18px/1 $lato;
+                    color: #b4c1c9;
+                    background: #fff;
+                    display: inline-block;
+                    padding: 0 10px;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+            .sms{
+                padding:0 30px;
+                display: block;
+                p{
+                    font: 400 15px/22px $lato;
+                    color: #9a8681;
+                    background: #ffe7e0;
+                    display: inline-block;
+                    padding: 12px 15px 15px;
+                    border-radius: 15px 15px 15px 0;
+                    margin-top: 10px;
+                }
+                h6{
+                    font: 400 13px/1 $lato;
+                    color: #b4c1c9;
+                    padding-top: 6px;
+                }
+            }
+            .sms_right{
+                text-align: right;
+                @extend .sms;
+                p{
+                    background: #f8fafb;
+                    color: #758690;
+                    border-radius: 15px 15px 0px 15px;
+                    text-align: left;
+                }
+            }
+            .md_2{
+                margin-top: 7px;
+            }
+            .type_messages{
+                border-top: 2px solid #f2f6f8; 
+                display: block;
+                overflow: hidden;
+                margin-top: 20px;
+                padding: 18px 20px 10px;
+                .input-field{
+                    position: relative;
+                    margin: 0; 
+                    textarea{
+                        margin: 0;
+                        outline: none;
+                        resize: none;
+                        border: 0;
+                        box-shadow: none;
+                        font: 400 15px/40px $lato;
+                        color: #beced7;
+                        width: 80%;
+                        @include placeholder{
+                            color: #beced7;
+                        }
+                    } 
+                    .imoji{
+                        position: absolute;
+                        top: 2px;
+                        right: 0;
+                        li{
+                            display: inline-block;
+                            padding-left: 17px;
+                            a{
+                                font-size: 25px;
+                                color: #beced7; 
+                                &:hover, &:focus{
+                                    color: $hover;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* End Messages Area */
+ 

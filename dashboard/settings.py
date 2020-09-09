@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "home"
+    "home",
+    "django_celery_results",
 ]
 
 MIDDLEWARE = [
@@ -85,11 +86,17 @@ DATABASES = {
         'NAME': 'copytrade',
         'USER': 'copytrade',
         'PASSWORD': 'copytrade',
-        'HOST': '34.220.125.164',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -128,3 +135,36 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+## celery
+CELERY_RESULT_BACKEND = 'django-db'
+
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
+# let logging work as configured:
+CELERYD_HIJACK_ROOT_LOGGER = False
+
+CELERY_BROKER_VHOST = 'copytrade'
+CELERY_BROKER_USE_SSL = False
+CELERY_EVENT_QUEUE_TTL = None
+
+CELERY_BROKER_TRANSPORT = 'amqp'
+CELERY_BROKER_HOSTNAME = 'localhost'
+CELERY_BROKER_USER = 'copytrade'
+CELERY_BROKER_PASSWORD = 'copytrade'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", ""),
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "")
+
+
+STATIC_URL = '/staticfiles/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = "/mediafiles/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")

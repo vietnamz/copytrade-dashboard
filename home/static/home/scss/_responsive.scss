@@ -1,0 +1,471 @@
+// Large devices (desktops, less than 1231px)
+@media (max-width: 1600px){
+    .footer_area .footer_row{
+        width: 1300px;
+            .footer_col {
+                padding: 0 15px;
+                .badges .badges_list li{
+                    padding-left: 0;
+                    padding-right: 20px;
+                }
+                .social_Sharing .social_icon li{
+                    padding-left: 0;
+                    padding-right: 15px;
+                    padding-bottom: 15px; 
+                }
+        }
+    }
+}
+@media (max-width: 1550px) {
+    .header_area ul .search_min .search_from input{
+        width: 200px;
+    }
+    .min_container .section_row{
+        width: 1300px;
+        .middle_section{
+            max-width: 580px;
+            .post .post_content .author_area .like_user .like_img li .mor_like{
+                display: none;
+            }
+            
+        }
+    }
+    .min_container_2 .sponsored_stories .sponsored a{
+        font-size: 14px;
+    }
+    
+    .min_container_2 .middle_section .post_details .post_content .socail_share_area{
+        .socail_share{
+            li{
+                a{
+                    width: 125px;
+                }   
+            }
+        }
+        p { 
+            overflow: hidden;
+            display: block;
+            width: 100%;
+        }
+    }
+    .author_profile{ 
+        padding-right: 0;
+        .post_follow li{
+            padding: 0 10px; 
+        }
+        .follow_messages li{
+            padding-bottom: 5px;
+        } 
+    }
+}
+@media (max-width: 1330px){
+    .min_container .section_row{
+        width: 1199px;
+        .middle_section{
+            max-width: 570px; 
+        }
+        .right_side_bar{
+            max-width: 320px;
+            .right_sidebar_iner .popular_posts .popular_item .p_content{
+                padding-left: 20px;
+            }
+        }
+        .left_side_bar {
+            max-width: 300px;
+            .categories .categories_icon li, .social_Sharing .social_icon li{
+                padding: 0;
+                padding-right: 10px;
+                padding-bottom: 10px;
+                &:first-child{
+                    padding-right: 10px;
+                }
+            }
+            .calendar-wrapper{
+                width: 100%;
+            }
+            .badges .badges_list li{
+                padding-left: 0;
+                padding-right: 14px;
+            }
+        }
+    }
+    .footer_area .footer_row {
+        width: 1140px;
+    }
+    .your_states .chart_area{
+        #chart #bars{
+            width: 90%;
+        }
+        .cercle_chart {
+            h2, h5{
+                right: 30px;
+            }   
+        }
+    } 
+    .photo_pages .section_row {
+        width: 100%; 
+    }
+}
+@media (max-width: 1200px){ 
+    .middle_section .post .post_content, .min_container .section_row .left_side_bar, .min_container .section_row .right_side_bar .right_sidebar_iner {
+        padding: 15px;
+    }
+    .min_container .section_row{
+        width: 100%; 
+    }
+    .footer_area .footer_row {
+        width: 100%;
+    }
+    .pagination_area{
+        padding-bottom: 50px;
+    }
+    .min_container.profile_pages{
+        padding-bottom: 50px;
+    }
+    .min_container .section_row .right_side_bar .right_sidebar_iner .popular_posts .popular_item{
+        max-width: 320px;
+        margin-left: 0;
+    }
+    .min_container .section_row .right_side_bar .right_sidebar_iner .popular_gallery .p_img {
+        width: 110px;
+    }
+    .min_container_2 .middle_section .post_details .post_content .socail_share_area .socail_share .share_count{
+        float: right;
+        top: 0;
+    }
+    .your_states{
+        .states_row .post_views{
+            margin-bottom: 20px;
+        }
+        .chart_area {
+            .cercle_chart{
+                margin-bottom: 30px;
+            }
+            #chart #bars li .bar{
+                width: 30px;
+            }
+        }
+        .user_signup_area .user_signup{
+            margin-bottom: 30px;
+        }
+    } 
+    
+}
+@media (max-width: 1080px){
+    .header_area{
+        padding: 0;
+        padding-left: 15px;
+        ul li .post_btn{
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    .banner_area .profile_picture{
+        left: 15px;
+    }
+    .author_profile{
+        padding-left: 0;
+    }
+    .middle_section .post .post_content .author_area .author .media_body a{
+        font-size: 15px;
+    }
+    .messages_area .messages_row {
+        .tab_content{
+            margin-top: 83px;
+        }
+        .search_area{
+            width: 400px;
+            border: 2px solid #f2f6f8;
+            border-top: 0;
+        }
+        .tab_panel { 
+            width: 80px;
+            .tab_list li{
+                height: 90px;
+                a .media img{
+                    height: 45px;
+                    width: 45px;
+                    border-radius: 50%;
+                }
+            }
+        } 
+    }
+}
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) {  
+    .middle_section .post .post_content, .min_container .section_row .left_side_bar, .min_container .section_row .right_side_bar .right_sidebar_iner {
+        padding: 30px;
+    }
+    .min_container .section_row{
+        display: block;
+        width: 100%;
+        .middle_section { 
+            max-width: 100%;
+            margin: 0 auto;
+            padding-left: 50px;
+            padding-right: 50px;
+            .fast_post{
+                margin-top: 50px; 
+            } 
+            .post .post_img img{
+                width: 100%;
+                height: 320px;
+            }
+            .post_c_img img{
+                width: 100%;
+                height: 350px;
+            }
+        } 
+        
+        .left_side_bar, .right_side_bar {
+            max-width: 100%;
+            margin: 20px 50px ;
+        }
+    } 
+    .header_area ul{
+        .search_min{
+            display: block;
+            padding: 0;
+            margin-bottom: 10px;
+            .search_from input{
+                width: 100%;
+            }
+        }
+        li a{
+            line-height: 45px;
+            padding: 0 20px;
+            i{
+                line-height: 45px;
+            }
+        } 
+        li.notifications .dropdown-content{
+            left: 0 !important;
+            width: 100%;
+            min-width: 100%;
+            top: 50px !important;
+            li{ 
+                a.chack_all_btn{
+                    height: 60px;
+                }
+                a{
+                    height: auto;
+                }
+            }
+            .media .media_body .btn_group{
+                float: left;
+            }
+        }
+        li.follow .dropdown-content{
+            left: 0 !important;
+            width: 100%;
+            min-width: 100%;
+            top: 50px !important; 
+        } 
+        li.user_dropdown{
+            .dropdown-button{
+                height: auto;
+            }
+            .dropdown-content{
+                width: 100%;
+                min-width: 100%; 
+                left: 0 !important;
+                top: 50px !important;
+                li{
+                    a{
+                        line-height: 45px;
+                        i{
+                            line-height: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+    .sm_post_btn {
+        min-width: 152px;
+        background: #ff7043;
+        border-radius: 6px;
+        font-weight: 700;
+        line-height: 45px;
+        height: auto;
+        margin-top: 17px;
+        color: #fff;
+        font-size: 14px;
+        float: right;
+        margin-right: 15px;
+        i{
+            font-size: 14px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+    }
+    nav .button-collapse{
+        margin-left: 0;
+        margin-top: 22px;
+        i{
+            font-size: 32px;
+        }
+    } 
+    
+    .footer_area .footer_row .footer_col.footer_trending{
+        padding-bottom: 50px;
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767px) {  
+    .middle_section .post .like_comment_area{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .author_profile .profile_menu{
+        padding-bottom: 20px;
+    }
+    .banner_area .banner_img{
+        height: 250px;
+    }
+    .login_popup_aera .login_popup_row .with_social li a {
+        width: 90px; 
+    }
+    
+    .login_popup_aera .login_popup_row .input_group {
+        width: 100%; 
+    }
+    .your_states .chart_area #chart #bars li .bar {
+        width: 20px;
+    }
+    .messages_area .messages_row .tab_content{
+        width: 70%;
+    }
+    .error_area h1{
+        font-size: 120px;
+    }
+}
+// Extra small devices (portrait phones, less than 576p
+@media (max-width: 575px) {
+    nav .brand-logo{
+        left: 35%;
+    }
+    .tranding_select li a{
+        margin-bottom: 3px;
+    }
+    .middle_section .post{
+        .post_content {
+            padding: 15px;
+            .author_area .author .media_body{
+                display: none;
+            } 
+        }
+        .like_comment_area {
+            .btn_floating h6, .updown_btn .count_n{
+                display: none;
+            }
+            .updown_btn .count_n_2{
+                display: inline-block;
+            }
+        } 
+    } 
+    .footer_area .footer_row .footer_col.footer_trending{
+        padding-bottom: 0px;
+    }
+    .socail_share_area .some_people{
+        padding-left: 0;
+    }
+    .min_container_2 .middle_section .post_details .post_content {
+        .post_heding_aea, .socail_share_area{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    } 
+    .min_container_2 .middle_section .post_details .like_comment_area .media .media_body .media { 
+        margin-left: -60px;
+    }
+    
+    .min_container_2 .sponsored_stories .sponsored a{
+        font-size: 18px;
+    }
+    .min_container .section_row .middle_section{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .min_container .section_row .middle_section{
+        .post .post_img img, .post_c_img img {
+            width: auto;
+            height: auto;
+        }
+    } 
+    .min_container .section_row .left_side_bar, .min_container .section_row .right_side_bar {
+        margin: 20px 15px;
+    }
+    .your_states .chart_area .cercle_chart{
+         h2, h5 {
+            right: 30px;
+            position: relative;
+            top: 20px;
+            right: auto;
+            left: 0;
+            float: left;
+            text-align: left;
+            display: block;
+            width: 100%;
+        }
+        h2{
+            top: 40px;
+        }
+    }
+    
+    .your_states .graph_chart_heder{
+        display: block;
+        .views_month{
+            display: block;
+            margin-bottom: 10px;
+        }
+    } 
+}
+
+@media (max-width: 475px) {
+    .hide_sm{
+        display: none;
+    }
+    .min_container_2 .sponsored_stories .sponsored{
+        width: 100%; 
+    }
+    .banner_area .profile_picture .media_body a{
+        font-size: 17px;
+    }
+    .login_popup_aera .login_popup_row .with_social li a {
+        width: 70px;
+    }
+    .your_states {
+        .chart_area #chart #bars {
+            width: 80%;
+            li .bar {
+                width: 10px;
+            }
+        }
+    }
+    .messages_area .messages_row {
+        .search_area{
+            width: 320px;
+        }
+        .all_messages .type_messages .input-field textarea{
+            @include placeholder{
+                color: #fff;
+            }
+        }
+    }
+    .read_latter .notifications_content li .media .media_body p{
+        font-size: 14px;
+    }
+    .banner_area{
+         .profile_picture{
+            bottom: 15px;
+            a img { 
+                height: 80px;
+                width: 80px;
+            }
+        }
+        .profile_menu{
+            padding-left: 10px;
+        }
+    }
+}

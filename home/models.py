@@ -1,23 +1,33 @@
 from django.db import models
-import uuid
+from django.contrib.auth.models import User
 
 
-class Customer(models.Model):
-    """Model representing an Customer."""
-    customer_id = models.AutoField(primary_key=True)
-    customer_uuid = models.UUIDField(default=uuid.uuid4, auto_created=True)
-    first_name = models.CharField(max_length=100, help_text="Enter your first name", null=True)
-    last_name = models.CharField(max_length=100, help_text="Enter your last name", null=True)
-    phone = models.CharField(max_length=15, help_text="Enter your phone number", null=True)
-    street_address = models.CharField(max_length=255, help_text="Enter your address", null=True)
-    city = models.CharField(max_length=255, help_text="Enter your city", null=True)
-    zip_code = models.CharField(max_length=255, help_text="Entry your zip code", null=True)
-    referrer = models.ForeignKey('Customer', default=None, on_delete=models.SET_NULL, null=True, blank=True,)
+class TimeInForce(models.Model):
+    symbol = models.CharField(max_length=6, help_text='GTK, IOC, or FOK', unique=True)
+    name = models.CharField(max_length=255, help_text='The human readable text')
 
 
-    class Meta:
-        ordering = ['customer_id']
+class OrderType(models.Model):
+    symbol = models.CharField(max_length=25, help_text='The symbol of the order type', unique=True)
+    name = models.CharField(max_length=255, help_text='The human readable text')
 
-    def __str__(self):
-        """String for representing the Model object."""
-        return f'{self.customer_id}, {self.last_name}, {self.first_name}'
+
+class OrderSideType(models.Model):
+    symbol = models.CharField(max_length=15, help_text='The symbol of the type', unique=True)
+    name = models.CharField(max_length=255, help_text='The human readable text')
+
+
+class Order(models.Model):
+    """
+    Model representing a order.
+    """
+    symbol = models.CharField(name='symbol', max_length=8,
+                              help_text="The symbol to be fill. etc... BTCUSD",
+                              null=False)
+
+    type = models.ForeignKey(OrderType, default=1, on_delete=models.PROTECT)
+
+    side = models.ForeignKey(OrderSideType, default=1, on_delete=models.CASCADE)
+
+    time_in_force = models.ForeignKey(TimeInForce, default=1, on_delete=models.SET_NULL, null=True)
+

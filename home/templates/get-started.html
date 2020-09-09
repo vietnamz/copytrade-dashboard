@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block content %}
+    <div class="banner_area">
+        <img src="{% static 'home/images/banner.jpg' %}" alt="" class="banner_img">
+    </div>
+    <!-- End Tranding Area -->
+    <!-- Min Container area -->
+    <section class="min_container min_pages">
+        <div class="section_row">
+            <div class="middle_section col" id="infinite_scroll">
+                <!-- Post -->
+                <div class="post">
+                   <div class="post_content">
+                        <div class="row author_area">
+                            <div class="col s4 author">
+                                <div class="col s4 media_left"><img src="{%  static 'home/images/author-1.jpg' %}" alt="" class="circle"></div>
+                                <div class="col s8 media_body">
+                                    <a href="#">Thuan Dinh</a>
+                                    <span>5 Minute ago</span>
+                                </div>
+                            </div>
+                            <div class="col s4 btn_floating">
+                                <a class="btn-floating waves-effect"><i class="ion-navicon-round"></i></a>
+                            </div>
+                            <div class="col s4 like_user">
+                                <ul class="like_img">
+                                   <li>
+                                        <ul class="hide_sm">
+                                            <li><a href="#" class="single_l_1"><img src="{%  static 'home/images/like-client-1.png' %}" alt=""></a></li><li><a href="#" class="mor_like">+8 more</a></li>
+                                        </ul>
+                                   </li>
+                                    <li class="post_d"><a class="dropdown-button waves-effect" href="#!" data-activates="post_dropdown"><i class="ion-android-more-vertical"></i></a>
+                                        <!-- Dropdown Structure -->
+                                        <ul id="post_dropdown" class="dropdown-content">
+                                            <li><a href="#">Report as spam</a></li>
+                                            <li><a href="#">Read later</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>Thuan already made a trade on BNBBTC symbol, would you like to copy his trade</p>
+                   </div>
+                    <div class="like_comment_area row">
+                        <div class="col s4 btn_floating">
+                            <a class="btn-floating waves-effect"><i class="ion-android-share-alt"></i></a>
+                            <h6>128k</h6>
+                        </div>
+                        <div class="col s4 updown_btn">
+                            <a href="#"><i class="ion-android-arrow-dropdown-circle"></i></a>
+                            <a href="#"><i class="ion-android-arrow-dropup-circle"></i></a>
+                            <a href="#" class="count_n">483</a>
+                        </div>
+                        <div class="col s4 updown_btn comment_c">
+                            <a href="#"><i class="ion-ios-chatboxes-outline"></i></a>
+                            <a href="#" class="count_n">14</a>
+                        </div>
+                    </div>
+                    <a href="#" class="submit_open_list">Copy</a>
+                </div>
+                <!-- End Post -->
+                <a href="#" class="load-mor btn-large">Loding next</a>
+            </div>
+            <!-- left side bar -->
+            <div class="col">
+                <div class="left_side_bar">
+                    <div class="calendar_widget">
+                        <h3 class="categories_tittle">Calendar</h3>
+                        <table class="calendar"></table>
+                    </div>
+                    <div class="social_Sharing">
+                        <h3 class="categories_tittle">Social Sharing</h3>
+                        <ul class="social_icon">
+                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#" class="googleplus"><i class="ion-social-googleplus"></i></a></li>
+                            <li><a href="#" class="facebook"><i class="ion-social-facebook"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="advertis">
+                        <a href="#"><img src="{% static 'home/images/advertis.jpg' %}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Right side bar -->
+            <div class="right_side_bar col">
+                <div class="right_sidebar_iner">
+                    <a href="#">
+                        <img src="{% static 'home/images/advertis-2.jpg' %}" alt="" class="responsive-img">
+                    </a>
+                    <div class="popular_posts">
+                        <h3 class="categories_tittle">Popular Trades</h3>
+                        <div class="row valign-wrapper popular_item">
+                            <div class="col s3 p_img">
+                               <a href="#">
+                                    <img src="{% static 'home/images/recent-post-1.jpg' %}" alt="" class="circle responsive-img">
+                               </a>
+                            </div>
+                            <div class="col s9 p_content">
+                               <a href="#">Poster can be one of the effective marketing and advertising materials.</a>
+                                <span class="black_text">2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="row valign-wrapper popular_item">
+                            <div class="col s3 p_img">
+                               <a href="#">
+                                    <img src="{% static 'home/images/recent-post-2.jpg' %}" alt="" class="circle responsive-img">
+                               </a>
+                            </div>
+                            <div class="col s9 p_content">
+                               <a href="#">Color is so powerful that it can persuade, motivate, inspire and touch</a>
+                                <span class="black_text">3 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Min Container area -->
+    <!-- Popup area -->
+    <div id="modal2" class="login_popup_aera modal">
+        <div class="login_popup_row">
+            <img src="{% static 'home/images/login-logo.png' %}" alt="">
+            <h4>Create a new account to Open List or <a href="#modal1" class="modal-trigger modal-close">Sign in</a></h4>
+            <form class="input_group">
+                <div class="input-field">
+                    <input  type="text" class="validate" placeholder="Full Name">
+                    <input  type="email" class="validate" placeholder="Email">
+                    <input type="password" class="validate" placeholder="Password">
+                </div>
+                <p>
+                    <input type="checkbox" id="test" />
+                    <label for="test">I accept the <a href="#">Terms and Services</a></label>
+                </p>
+                <button class="waves-effect">Sign in</button>
+            </form>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><i class="ion-close-round"></i></a>
+        </div>
+    </div>
+    <!-- Log In Popup -->
+    <div id="modal1" class="login_popup_aera modal">
+        <div class="login_popup_row">
+            <img src="{% static 'home/images/login-logo.png' %}" alt="">
+            <h4>Log in to Open List or <a href="#modal2" class="modal-trigger modal-close">create an account</a></h4>
+            <h6>Sign in using social media</h6>
+            <ul class="with_social">
+                <li><a href="#" class="waves-effect"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" class="waves-effect facebook"><i class="fa fa-facebook-square"></i></a></li>
+                <li><a href="#" class="waves-effect google-plus"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+            <h6>or Sign in using email address</h6>
+            <form class="input_group">
+                <div class="input-field">
+                    <input  type="email" class="validate" placeholder="Email">
+                    <input type="password" class="validate" placeholder="Password">
+                </div>
+                <p>
+                    <input type="checkbox" id="test2" />
+                    <label for="test2">Remember me <a href="#">Forget password?</a></label>
+                </p>
+                <button class="waves-effect">Sign in</button>
+            </form>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><i class="ion-close-round"></i></a>
+        </div>
+    </div>
+    <!-- End Popup area -->
+    {% endblock %}
+
