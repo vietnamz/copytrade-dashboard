@@ -45,7 +45,7 @@
     function infiniteScroll() {
         if ($('.middle_section, .notifications_area').length) {
            $('.middle_section').jscroll({
-                loadingHtml: '<img src="static/home/images/preloader.svg" alt="Loading" />',
+                loadingHtml: '<img src="staticfiles/home/images/preloader.svg" alt="Loading" />',
                 padding: 0, 
                 autoTriggerUntil: 2, 
                 nextSelector: 'a.load-mor:last',
@@ -54,7 +54,7 @@
            });
             
            $('.notifications_content').jscroll({
-                loadingHtml: '<img src="static/home/images/preloader.svg" alt="Loading" />',
+                loadingHtml: '<img src="staticfiles/home/images/preloader.svg" alt="Loading" />',
                 padding: 0, 
                 autoTriggerUntil: 3,  
                 contentSelector: '.notifications_content li', 
