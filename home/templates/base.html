@@ -59,7 +59,7 @@
                             <a href="#" class="search_icon"><i class="ion-ios-search"></i></a>
                        </div>
                     </li>
-                    <li><a href="#post_modal" class="waves-effect btn post_btn modal-trigger"><i class="ion-plus"></i><span>Add Post</span></a></li>
+                    <li><a href="#post_modal" class="waves-effect btn post_btn modal-trigger"><i class="ion-plus"></i><span>Trade</span></a></li>
                     <!-- Follow feed -->
                     <li class="notifications follow"><a class="dropdown-button" href="#!" data-activates="dropdown4"><i class="ion-ios-person-outline"></i><b class="n-number">7</b></a>
                         <!-- Dropdown Structure -->
@@ -287,7 +287,7 @@
                             <li><a href="#"><i class="ion-gear-b"></i>Settings</a></li>
                             <li><a href="#"><i class="ion-ios-flag"></i>Privacy Policy</a></li>
                             <li><a href="#"><i class="ion-podium"></i>FAQ</a></li>
-                            <li><a href="#"><i class="ion-power"></i>Log out</a></li>
+                            <li><a href="{% url 'logout' %}"><i class="ion-power"></i>Log out</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -298,7 +298,7 @@
                             <a href="#" class="search_icon"><i class="ion-ios-search"></i></a>
                        </div>
                     </li>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{% url 'index' %}">Home</a></li>
                     <!-- Follow feed -->
                     <li class="notifications follow"><a class="dropdown-button" href="#!" data-activates="dropdown_s1"><i class="ion-ios-person-outline"></i><b class="n-number">7</b></a>
                         <!-- Dropdown Structure -->
@@ -629,11 +629,10 @@
     <script src="{% static 'home/vendors/calendar/dcalendar.picker.js' %}"></script>
     <!-- Load JS -->
     <script src="{% static 'home/vendors/infinite-scroll/jquery.jscroll.js' %}"></script>
-    <!-- Theme JS -->
-    <script src="{% static 'home/js/theme.js' %}"></script>
-
     <!-- Check Button js -->
     <script src="{% static 'home/vendors/check-button/jquery.jqflipswitch.min.js' %}"></script>
     <script src="{% static 'home/vendors/check-button/jquery.jqflipswitch.js' %}"></script>
+    <!-- Theme JS -->
+    <script src="{% static 'home/js/theme.js' %}"></script>
 
 </body>

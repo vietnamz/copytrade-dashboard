@@ -2,7 +2,8 @@ from django import forms
 from django.contrib.auth.models import User
 # from django.core.exceptions import ValidationError
 from django.utils.translation import gettext as _
-
+import logging
+logger = logging.getLogger(__name__)
 
 # noinspection PyUnresolvedReferences
 class UserNameField(forms.CharField):
@@ -48,18 +49,16 @@ class PassworField(forms.CharField):
 
 
 class RegisterForm(forms.Form):
-    user_name = UserNameField(fieldname='register', max_length=100, required=False)
-    password = PassworField(fieldname='Password', widget=forms.PasswordInput())
-    retype_password = PassworField(fieldname='Retype password', widget=forms.PasswordInput())
+    id_username_r = UserNameField(fieldname='Username', max_length=100, required=False)
+    id_password_r = PassworField(fieldname='Password', widget=forms.PasswordInput())
+    id_password_r_r = PassworField(fieldname='Retype password', widget=forms.PasswordInput())
 
     def clean(self):
         cleaned_data = super(RegisterForm, self).clean()
-        password = cleaned_data.get("password")
-        confirm_password = cleaned_data.get("retype_password")
-        if password != confirm_password:
-            raise forms.ValidationError(
-                "password and confirm_password does not match"
-            )
+        password = cleaned_data.get("id_password_r")
+        confirm_password = cleaned_data.get("id_password_r_r")
+        logger.error("password %s" , password)
+        logger.error("confirm_password %s", confirm_password)
         return cleaned_data
 
 

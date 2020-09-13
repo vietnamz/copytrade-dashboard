@@ -123,25 +123,31 @@
     <div id="modal2" class="login_popup_aera modal">
         <div class="login_popup_row">
             <img src="{% static 'home/images/login-logo.png' %}" alt="">
-            <h4>Create a new account to Open List or <a href="#modal1" class="modal-trigger modal-close">Sign in</a></h4>
-            <form class="input_group">
+            <h4>Create a new account to E Crickets or <a href="#modal1" class="modal-trigger modal-close">Sign in</a></h4>
+            <form class="input_group" action="{% url 'register' %}" method="POST">
+                {% csrf_token %}
+                <div class="alert alert-error" hidden id="userExistRegister">
+                  <span>
+                    <p style="padding: 3px;color: red;font-weight: bold; text-align: center">Looks like the passwords you entered don't match!</p>
+                  </span>
+                </div>
                 <div class="input-field">
-                    <input  type="text" class="validate" placeholder="Full Name">
-                    <input  type="email" class="validate" placeholder="Email">
-                    <input type="password" class="validate" placeholder="Password">
+                    <input type="text" class="validate" placeholder="Username" name="id_username_r" id="id_username_r_r">
+                    <input type="password" class="validate" placeholder="Password" name="id_password_r" id="id_password_r">
+                    <input type="password" class="validate" placeholder="Re-type Password" name="id_password_r_r" id="id_password_r_r">
                 </div>
                 <p>
                     <input type="checkbox" id="test" />
                     <label for="test">I accept the <a href="#">Terms and Services</a></label>
                 </p>
-                <button class="waves-effect">Sign in</button>
+                <button class="waves-effect" style="background-color: gray" type="submit" disabled="true">Sign in</button>
             </form>
             <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><i class="ion-close-round"></i></a>
         </div>
     </div>
     <!-- Log In Popup -->
     <div id="modal1" class="login_popup_aera modal">
-        <div class="login_popup_row">
+        <div class="login_popup_row" action="{% url 'login' %}" method="POST">
             <img src="{% static 'home/images/login-logo.png' %}" alt="">
             <h4>Log in to Open List or <a href="#modal2" class="modal-trigger modal-close">create an account</a></h4>
             <h6>Sign in using social media</h6>
@@ -151,10 +157,10 @@
                 <li><a href="#" class="waves-effect google-plus"><i class="fa fa-google-plus"></i></a></li>
             </ul>
             <h6>or Sign in using email address</h6>
-            <form class="input_group">
+            <form class="input_group" action="{% url 'register' %}" method="POST">
                 <div class="input-field">
-                    <input  type="email" class="validate" placeholder="Email">
-                    <input type="password" class="validate" placeholder="Password">
+                    <input type="email" class="validate" placeholder="Username" id="id_username">
+                    <input type="password" class="validate" placeholder="Password" id="id_password">
                 </div>
                 <p>
                     <input type="checkbox" id="test2" />
@@ -165,6 +171,48 @@
             <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><i class="ion-close-round"></i></a>
         </div>
     </div>
+    {% block javascript %}
+    <!-- jQuery JS -->
+    <script src="{% static 'home/js/jquery-3.3.1.min.js' %}"></script>
+    <script>
+        console.log("tam");
+        $(document).ready(function() {
+            $(".userExistRegister").click(function () {
+                $("p").hide(1000, function () {
+                    $(".userExistRegister").prop("")
+                });
+            })
+        }
+        $("#id_username_r_r").change(function() {
+           var username =$(this).val();
+           if(username != ""){
+             $.ajax({
+               url:`{% url 'user_exist' %}?username=${username}`,
+               type:'GET',
+             })
+             .done(function(response){
+               console.log("response=" + response);
+               if(response==true){
+                   $(".userExistRegister").blur
+                 $(".userExistRegister").show()
+                 $(".username_error").remove();
+                 $("<span class='username_error' style='padding: 5px;color: red;font-weight: bold;'>Username Available</span>").insertAfter("#id_username_r");
+                }
+               else{
+                 $(".username_error").remove();
+                 $("<span class='username_error' style='padding: 5px;color: green;font-weight: bold;'>>Username not Available</span>").insertAfter("#id_username_r");
+               }
+             })
+             .fail(function(){
+               console.log("failed");
+             })
+           }
+           else{
+             $(".username_error").remove();
+           }
+        });
+    </script>
+    {% endblock %}
     <!-- End Popup area -->
     {% endblock %}
 
